@@ -1,6 +1,6 @@
 {
   "name": "out",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "git@github.com:berkerozer/tekpanel-ts-client.git",
   "author": "berkerozer <me@berkerozer.com.tr>",
