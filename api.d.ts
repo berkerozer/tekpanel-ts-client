@@ -100,75 +100,25 @@ export interface AuthResponseSuccess {
      * @type {boolean}
      * @memberof AuthResponseSuccess
      */
-    'success': boolean;
+    success: boolean;
     /**
      *
-     * @type {AuthResponseSuccessMessage}
+     * @type {object}
      * @memberof AuthResponseSuccess
      */
-    'message': AuthResponseSuccessMessage;
+    message: object;
     /**
      *
      * @type {string}
      * @memberof AuthResponseSuccess
      */
-    'token': string;
+    token: string;
     /**
      *
-     * @type {AuthResponseSuccessUser}
+     * @type {object}
      * @memberof AuthResponseSuccess
      */
-    'user': AuthResponseSuccessUser;
-}
-/**
- *
- * @export
- * @interface AuthResponseSuccessMessage
- */
-export interface AuthResponseSuccessMessage {
-    /**
-     *
-     * @type {string}
-     * @memberof AuthResponseSuccessMessage
-     */
-    'tr'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AuthResponseSuccessMessage
-     */
-    'en'?: string;
-}
-/**
- *
- * @export
- * @interface AuthResponseSuccessUser
- */
-export interface AuthResponseSuccessUser {
-    /**
-     *
-     * @type {string}
-     * @memberof AuthResponseSuccessUser
-     */
-    'name'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AuthResponseSuccessUser
-     */
-    'email'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AuthResponseSuccessUser
-     */
-    'image'?: string;
-    /**
-     *
-     * @type {boolean}
-     * @memberof AuthResponseSuccessUser
-     */
-    'emailVerified'?: boolean;
+    user: object;
 }
 /**
  *
@@ -412,7 +362,7 @@ export interface CreateStoreDto {
      * @type {string}
      * @memberof CreateStoreDto
      */
-    'name': string;
+    name: string;
     /**
      *
      * @type {string}
@@ -421,10 +371,16 @@ export interface CreateStoreDto {
     'store-url': string;
     /**
      *
+     * @type {string}
+     * @memberof CreateStoreDto
+     */
+    slug: string;
+    /**
+     *
      * @type {object}
      * @memberof CreateStoreDto
      */
-    'credentials': object;
+    credentials: object;
 }
 /**
  *
@@ -437,19 +393,19 @@ export interface ForbiddenResponse {
      * @type {string}
      * @memberof ForbiddenResponse
      */
-    'error': string;
+    error: string;
     /**
      *
      * @type {number}
      * @memberof ForbiddenResponse
      */
-    'statusCode': number;
+    statusCode: number;
     /**
      *
-     * @type {AuthResponseSuccessMessage}
+     * @type {LoginResponse400MessageOneOf}
      * @memberof ForbiddenResponse
      */
-    'message': AuthResponseSuccessMessage;
+    message: LoginResponse400MessageOneOf;
 }
 /**
  *
@@ -539,7 +495,26 @@ export interface LoginResponse400 {
  * @type LoginResponse400Message
  * @export
  */
-export type LoginResponse400Message = Array<string> | AuthResponseSuccessMessage;
+export type LoginResponse400Message = Array<string> | LoginResponse400MessageOneOf;
+/**
+ *
+ * @export
+ * @interface LoginResponse400MessageOneOf
+ */
+export interface LoginResponse400MessageOneOf {
+    /**
+     *
+     * @type {string}
+     * @memberof LoginResponse400MessageOneOf
+     */
+    'tr'?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof LoginResponse400MessageOneOf
+     */
+    'en'?: string;
+}
 /**
  *
  * @export
@@ -954,37 +929,49 @@ export interface Store {
      * @type {string}
      * @memberof Store
      */
-    'id': string;
+    id: string;
     /**
      *
      * @type {string}
      * @memberof Store
      */
-    'name': string;
+    name: string;
     /**
      *
      * @type {string}
      * @memberof Store
      */
-    'slug': string;
+    slug: string;
     /**
      *
      * @type {string}
      * @memberof Store
      */
-    'url': string;
+    url: string;
     /**
      *
      * @type {string}
      * @memberof Store
      */
-    'image': string;
+    status: string;
     /**
      *
-     * @type {string}
+     * @type {object}
      * @memberof Store
      */
-    'status': string;
+    credentials: object;
+    /**
+     *
+     * @type {object}
+     * @memberof Store
+     */
+    marketPlace: object;
+    /**
+     *
+     * @type {object}
+     * @memberof Store
+     */
+    brand: object;
 }
 /**
  *
@@ -1061,13 +1048,13 @@ export interface SuccessResponse {
      * @type {boolean}
      * @memberof SuccessResponse
      */
-    'success': boolean;
+    success: boolean;
     /**
      *
-     * @type {AuthResponseSuccessMessage}
+     * @type {LoginResponse400MessageOneOf}
      * @memberof SuccessResponse
      */
-    'message': AuthResponseSuccessMessage;
+    message: LoginResponse400MessageOneOf;
 }
 /**
  *
@@ -1080,19 +1067,19 @@ export interface UnAuthorizedResponse {
      * @type {string}
      * @memberof UnAuthorizedResponse
      */
-    'error': string;
+    error: string;
     /**
      *
      * @type {number}
      * @memberof UnAuthorizedResponse
      */
-    'statusCode': number;
+    statusCode: number;
     /**
      *
-     * @type {AuthResponseSuccessMessage}
+     * @type {LoginResponse400MessageOneOf}
      * @memberof UnAuthorizedResponse
      */
-    'message': AuthResponseSuccessMessage;
+    message: LoginResponse400MessageOneOf;
 }
 /**
  *

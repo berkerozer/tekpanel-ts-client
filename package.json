@@ -1,6 +1,6 @@
 {
   "name": "api-client",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "repository": "https://github.com/berkerozer/tekpanel-ts-client.git",
   "author": "berkerozer <me@berkerozer.com.tr>",
