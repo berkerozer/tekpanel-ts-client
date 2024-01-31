@@ -16,7 +16,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.StoresApi = exports.StoresApiFactory = exports.StoresApiFp = exports.StoresApiAxiosParamCreator = exports.PermissionsApi = exports.PermissionsApiFactory = exports.PermissionsApiFp = exports.PermissionsApiAxiosParamCreator = exports.OrganizationsApi = exports.OrganizationsApiFactory = exports.OrganizationsApiFp = exports.OrganizationsApiAxiosParamCreator = exports.MarketplaceApi = exports.MarketplaceApiFactory = exports.MarketplaceApiFp = exports.MarketplaceApiAxiosParamCreator = exports.DefaultApi = exports.DefaultApiFactory = exports.DefaultApiFp = exports.DefaultApiAxiosParamCreator = exports.BrandsApi = exports.BrandsApiFactory = exports.BrandsApiFp = exports.BrandsApiAxiosParamCreator = exports.AuthApi = exports.AuthApiFactory = exports.AuthApiFp = exports.AuthApiAxiosParamCreator = exports.StoreControllerListStores200ResponseSortOptionsEnum = exports.StoreControllerCreateStore201ResponseStatusEnum = exports.PermissionControllerListPermissions200ResponseSortOptionsEnum = exports.OrganizationControllerListOrganizations200ResponseSortOptionsEnum = exports.OrganizationControllerCreateOrganization201ResponseStatusEnum = exports.MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum = exports.ListResponseDtoSortOptionsEnum = exports.CreateResponseDtoStatusEnum = exports.BrandsControllerListPermissions200ResponseSortOptionsEnum = exports.BrandsControllerCreatePermission201ResponseStatusEnum = void 0;
+exports.StoresApi = exports.StoresApiFactory = exports.StoresApiFp = exports.StoresApiAxiosParamCreator = exports.PermissionsApi = exports.PermissionsApiFactory = exports.PermissionsApiFp = exports.PermissionsApiAxiosParamCreator = exports.OrganizationsApi = exports.OrganizationsApiFactory = exports.OrganizationsApiFp = exports.OrganizationsApiAxiosParamCreator = exports.MarketplaceApi = exports.MarketplaceApiFactory = exports.MarketplaceApiFp = exports.MarketplaceApiAxiosParamCreator = exports.DefaultApi = exports.DefaultApiFactory = exports.DefaultApiFp = exports.DefaultApiAxiosParamCreator = exports.BrandsApi = exports.BrandsApiFactory = exports.BrandsApiFp = exports.BrandsApiAxiosParamCreator = exports.AuthApi = exports.AuthApiFactory = exports.AuthApiFp = exports.AuthApiAxiosParamCreator = exports.StoreControllerListStores200ResponseSortOptionsEnum = exports.StoreControllerCreateStore201ResponseStatusEnum = exports.PermissionControllerListPermissions200ResponseSortOptionsEnum = exports.OrganizationControllerListOrganizations200ResponseSortOptionsEnum = exports.OrganizationControllerCreateOrganization201ResponseStatusEnum = exports.MarketplaceControllerSearchCategory200ResponseSortOptionsEnum = exports.MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum = exports.MarketplaceControllerGetCategoryAttributes200ResponseSortOptionsEnum = exports.ListResponseDtoSortOptionsEnum = exports.CreateResponseDtoStatusEnum = exports.BrandsControllerListPermissions200ResponseSortOptionsEnum = exports.BrandsControllerCreatePermission201ResponseStatusEnum = void 0;
 const axios_1 = __importDefault(require("axios"));
 // Some imports not used depending on template conditions
 // @ts-ignore
@@ -39,7 +39,15 @@ exports.ListResponseDtoSortOptionsEnum = {
     Desc: 'desc',
     Asc: 'asc'
 };
+exports.MarketplaceControllerGetCategoryAttributes200ResponseSortOptionsEnum = {
+    Desc: 'desc',
+    Asc: 'asc'
+};
 exports.MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum = {
+    Desc: 'desc',
+    Asc: 'asc'
+};
+exports.MarketplaceControllerSearchCategory200ResponseSortOptionsEnum = {
     Desc: 'desc',
     Asc: 'asc'
 };
@@ -926,6 +934,53 @@ const MarketplaceApiAxiosParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary list Attributes
+         * @param {string} marketplace
+         * @param {string} category
+         * @param {string} authorization JWT Token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        marketplaceControllerGetCategoryAttributes: async (marketplace, category, authorization, options = {}) => {
+            // verify required parameter 'marketplace' is not null or undefined
+            (0, common_1.assertParamExists)('marketplaceControllerGetCategoryAttributes', 'marketplace', marketplace);
+            // verify required parameter 'category' is not null or undefined
+            (0, common_1.assertParamExists)('marketplaceControllerGetCategoryAttributes', 'category', category);
+            // verify required parameter 'authorization' is not null or undefined
+            (0, common_1.assertParamExists)('marketplaceControllerGetCategoryAttributes', 'authorization', authorization);
+            const localVarPath = `/marketplaces/{marketplace}/categories/{category}/attributes`
+                .replace(`{${'marketplace'}}`, encodeURIComponent(String(marketplace)))
+                .replace(`{${'category'}}`, encodeURIComponent(String(category)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = {
+                method: 'GET',
+                ...baseOptions,
+                ...options,
+            };
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (authorization != null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            (0, common_1.setSearchParams)(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {
+                ...localVarHeaderParameter,
+                ...headersFromBaseOptions,
+                ...options.headers,
+            };
+            return {
+                url: (0, common_1.toPathString)(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
          * @summary list MarketPlaces
          * @param {string} authorization JWT Token
          * @param {number} [limit]
@@ -945,7 +1000,11 @@ const MarketplaceApiAxiosParamCreator = function (configuration) {
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+            const localVarRequestOptions = {
+                method: 'GET',
+                ...baseOptions,
+                ...options,
+            };
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (limit !== undefined) {
@@ -965,7 +1024,11 @@ const MarketplaceApiAxiosParamCreator = function (configuration) {
             }
             (0, common_1.setSearchParams)(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+            localVarRequestOptions.headers = {
+                ...localVarHeaderParameter,
+                ...headersFromBaseOptions,
+                ...options.headers,
+            };
             return {
                 url: (0, common_1.toPathString)(localVarUrlObj),
                 options: localVarRequestOptions,
@@ -973,33 +1036,63 @@ const MarketplaceApiAxiosParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary list Categories
          * @param {string} marketplace
          * @param {string} search
+         * @param {string} authorization JWT Token
+         * @param {number} [limit]
+         * @param {number} [page]
+         * @param {string} [orderBy]
+         * @param {boolean} [desc]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        marketplaceControllerSearchCategory: async (marketplace, search, options = {}) => {
+        marketplaceControllerSearchCategory: async (marketplace, search, authorization, limit, page, orderBy, desc, options = {}) => {
             // verify required parameter 'marketplace' is not null or undefined
             (0, common_1.assertParamExists)('marketplaceControllerSearchCategory', 'marketplace', marketplace);
             // verify required parameter 'search' is not null or undefined
             (0, common_1.assertParamExists)('marketplaceControllerSearchCategory', 'search', search);
-            const localVarPath = `/marketplaces/{marketplace}/categories`
-                .replace(`{${"marketplace"}}`, encodeURIComponent(String(marketplace)));
+            // verify required parameter 'authorization' is not null or undefined
+            (0, common_1.assertParamExists)('marketplaceControllerSearchCategory', 'authorization', authorization);
+            const localVarPath = `/marketplaces/{marketplace}/categories`.replace(`{${'marketplace'}}`, encodeURIComponent(String(marketplace)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options };
+            const localVarRequestOptions = {
+                method: 'GET',
+                ...baseOptions,
+                ...options,
+            };
             const localVarHeaderParameter = {};
             const localVarQueryParameter = {};
             if (search !== undefined) {
                 localVarQueryParameter['search'] = search;
             }
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+            if (orderBy !== undefined) {
+                localVarQueryParameter['orderBy'] = orderBy;
+            }
+            if (desc !== undefined) {
+                localVarQueryParameter['desc'] = desc;
+            }
+            if (authorization != null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
             (0, common_1.setSearchParams)(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = { ...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers };
+            localVarRequestOptions.headers = {
+                ...localVarHeaderParameter,
+                ...headersFromBaseOptions,
+                ...options.headers,
+            };
             return {
                 url: (0, common_1.toPathString)(localVarUrlObj),
                 options: localVarRequestOptions,
@@ -1015,6 +1108,21 @@ exports.MarketplaceApiAxiosParamCreator = MarketplaceApiAxiosParamCreator;
 const MarketplaceApiFp = function (configuration) {
     const localVarAxiosParamCreator = (0, exports.MarketplaceApiAxiosParamCreator)(configuration);
     return {
+        /**
+         *
+         * @summary list Attributes
+         * @param {string} marketplace
+         * @param {string} category
+         * @param {string} authorization JWT Token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async marketplaceControllerGetCategoryAttributes(marketplace, category, authorization, options) {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.marketplaceControllerGetCategoryAttributes(marketplace, category, authorization, options);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = base_1.operationServerMap['MarketplaceApi.marketplaceControllerGetCategoryAttributes']?.[index]?.url;
+            return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, operationBasePath || basePath);
+        },
         /**
          *
          * @summary list MarketPlaces
@@ -1034,13 +1142,19 @@ const MarketplaceApiFp = function (configuration) {
         },
         /**
          *
+         * @summary list Categories
          * @param {string} marketplace
          * @param {string} search
+         * @param {string} authorization JWT Token
+         * @param {number} [limit]
+         * @param {number} [page]
+         * @param {string} [orderBy]
+         * @param {boolean} [desc]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async marketplaceControllerSearchCategory(marketplace, search, options) {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.marketplaceControllerSearchCategory(marketplace, search, options);
+        async marketplaceControllerSearchCategory(marketplace, search, authorization, limit, page, orderBy, desc, options) {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.marketplaceControllerSearchCategory(marketplace, search, authorization, limit, page, orderBy, desc, options);
             const index = configuration?.serverIndex ?? 0;
             const operationBasePath = base_1.operationServerMap['MarketplaceApi.marketplaceControllerSearchCategory']?.[index]?.url;
             return (axios, basePath) => (0, common_1.createRequestFunction)(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration)(axios, operationBasePath || basePath);
@@ -1057,6 +1171,20 @@ const MarketplaceApiFactory = function (configuration, basePath, axios) {
     return {
         /**
          *
+         * @summary list Attributes
+         * @param {string} marketplace
+         * @param {string} category
+         * @param {string} authorization JWT Token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        marketplaceControllerGetCategoryAttributes(marketplace, category, authorization, options) {
+            return localVarFp
+                .marketplaceControllerGetCategoryAttributes(marketplace, category, authorization, options)
+                .then((request) => request(axios, basePath));
+        },
+        /**
+         *
          * @summary list MarketPlaces
          * @param {string} authorization JWT Token
          * @param {number} [limit]
@@ -1067,17 +1195,27 @@ const MarketplaceApiFactory = function (configuration, basePath, axios) {
          * @throws {RequiredError}
          */
         marketplaceControllerListMarketplaces(authorization, limit, page, orderBy, desc, options) {
-            return localVarFp.marketplaceControllerListMarketplaces(authorization, limit, page, orderBy, desc, options).then((request) => request(axios, basePath));
+            return localVarFp
+                .marketplaceControllerListMarketplaces(authorization, limit, page, orderBy, desc, options)
+                .then((request) => request(axios, basePath));
         },
         /**
          *
+         * @summary list Categories
          * @param {string} marketplace
          * @param {string} search
+         * @param {string} authorization JWT Token
+         * @param {number} [limit]
+         * @param {number} [page]
+         * @param {string} [orderBy]
+         * @param {boolean} [desc]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        marketplaceControllerSearchCategory(marketplace, search, options) {
-            return localVarFp.marketplaceControllerSearchCategory(marketplace, search, options).then((request) => request(axios, basePath));
+        marketplaceControllerSearchCategory(marketplace, search, authorization, limit, page, orderBy, desc, options) {
+            return localVarFp
+                .marketplaceControllerSearchCategory(marketplace, search, authorization, limit, page, orderBy, desc, options)
+                .then((request) => request(axios, basePath));
         },
     };
 };
@@ -1091,6 +1229,21 @@ exports.MarketplaceApiFactory = MarketplaceApiFactory;
 class MarketplaceApi extends base_1.BaseAPI {
     /**
      *
+     * @summary list Attributes
+     * @param {string} marketplace
+     * @param {string} category
+     * @param {string} authorization JWT Token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MarketplaceApi
+     */
+    marketplaceControllerGetCategoryAttributes(marketplace, category, authorization, options) {
+        return (0, exports.MarketplaceApiFp)(this.configuration)
+            .marketplaceControllerGetCategoryAttributes(marketplace, category, authorization, options)
+            .then((request) => request(this.axios, this.basePath));
+    }
+    /**
+     *
      * @summary list MarketPlaces
      * @param {string} authorization JWT Token
      * @param {number} [limit]
@@ -1102,18 +1255,28 @@ class MarketplaceApi extends base_1.BaseAPI {
      * @memberof MarketplaceApi
      */
     marketplaceControllerListMarketplaces(authorization, limit, page, orderBy, desc, options) {
-        return (0, exports.MarketplaceApiFp)(this.configuration).marketplaceControllerListMarketplaces(authorization, limit, page, orderBy, desc, options).then((request) => request(this.axios, this.basePath));
+        return (0, exports.MarketplaceApiFp)(this.configuration)
+            .marketplaceControllerListMarketplaces(authorization, limit, page, orderBy, desc, options)
+            .then((request) => request(this.axios, this.basePath));
     }
     /**
      *
+     * @summary list Categories
      * @param {string} marketplace
      * @param {string} search
+     * @param {string} authorization JWT Token
+     * @param {number} [limit]
+     * @param {number} [page]
+     * @param {string} [orderBy]
+     * @param {boolean} [desc]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MarketplaceApi
      */
-    marketplaceControllerSearchCategory(marketplace, search, options) {
-        return (0, exports.MarketplaceApiFp)(this.configuration).marketplaceControllerSearchCategory(marketplace, search, options).then((request) => request(this.axios, this.basePath));
+    marketplaceControllerSearchCategory(marketplace, search, authorization, limit, page, orderBy, desc, options) {
+        return (0, exports.MarketplaceApiFp)(this.configuration)
+            .marketplaceControllerSearchCategory(marketplace, search, authorization, limit, page, orderBy, desc, options)
+            .then((request) => request(this.axios, this.basePath));
     }
 }
 exports.MarketplaceApi = MarketplaceApi;

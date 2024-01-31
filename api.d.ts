@@ -16,21 +16,40 @@ import { BaseAPI } from './base';
 /**
  *
  * @export
+ * @interface Attribute
+ */
+export interface Attribute {
+  /**
+   *
+   * @type {string}
+   * @memberof Attribute
+   */
+  id: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Attribute
+   */
+  name: string;
+}
+/**
+ *
+ * @export
  * @interface AuthControllerMe200Response
  */
 export interface AuthControllerMe200Response {
-    /**
-     *
-     * @type {boolean}
-     * @memberof AuthControllerMe200Response
-     */
-    'success'?: boolean;
-    /**
-     *
-     * @type {AuthControllerMe200ResponseAllOfMessage}
-     * @memberof AuthControllerMe200Response
-     */
-    'message'?: AuthControllerMe200ResponseAllOfMessage;
+  /**
+   *
+   * @type {boolean}
+   * @memberof AuthControllerMe200Response
+   */
+  success?: boolean;
+  /**
+   *
+   * @type {AuthControllerMe200ResponseAllOfMessage}
+   * @memberof AuthControllerMe200Response
+   */
+  message?: AuthControllerMe200ResponseAllOfMessage;
 }
 /**
  *
@@ -38,18 +57,18 @@ export interface AuthControllerMe200Response {
  * @interface AuthControllerMe200ResponseAllOfMessage
  */
 export interface AuthControllerMe200ResponseAllOfMessage {
-    /**
-     *
-     * @type {string}
-     * @memberof AuthControllerMe200ResponseAllOfMessage
-     */
-    'tr'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AuthControllerMe200ResponseAllOfMessage
-     */
-    'en'?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AuthControllerMe200ResponseAllOfMessage
+   */
+  tr?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AuthControllerMe200ResponseAllOfMessage
+   */
+  en?: string;
 }
 /**
  *
@@ -57,12 +76,12 @@ export interface AuthControllerMe200ResponseAllOfMessage {
  * @interface AuthControllerMe400Response
  */
 export interface AuthControllerMe400Response {
-    /**
-     *
-     * @type {AuthControllerMe400ResponseAllOfMessage}
-     * @memberof AuthControllerMe400Response
-     */
-    'message'?: AuthControllerMe400ResponseAllOfMessage;
+  /**
+   *
+   * @type {AuthControllerMe400ResponseAllOfMessage}
+   * @memberof AuthControllerMe400Response
+   */
+  message?: AuthControllerMe400ResponseAllOfMessage;
 }
 /**
  *
@@ -70,24 +89,24 @@ export interface AuthControllerMe400Response {
  * @interface AuthControllerMe400ResponseAllOfMessage
  */
 export interface AuthControllerMe400ResponseAllOfMessage {
-    /**
-     *
-     * @type {string}
-     * @memberof AuthControllerMe400ResponseAllOfMessage
-     */
-    'field'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AuthControllerMe400ResponseAllOfMessage
-     */
-    'tr'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof AuthControllerMe400ResponseAllOfMessage
-     */
-    'en'?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AuthControllerMe400ResponseAllOfMessage
+   */
+  field?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AuthControllerMe400ResponseAllOfMessage
+   */
+  tr?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AuthControllerMe400ResponseAllOfMessage
+   */
+  en?: string;
 }
 /**
  *
@@ -95,30 +114,30 @@ export interface AuthControllerMe400ResponseAllOfMessage {
  * @interface AuthResponseSuccess
  */
 export interface AuthResponseSuccess {
-    /**
-     *
-     * @type {boolean}
-     * @memberof AuthResponseSuccess
-     */
-    success: boolean;
-    /**
-     *
-     * @type {object}
-     * @memberof AuthResponseSuccess
-     */
-    message: object;
-    /**
-     *
-     * @type {string}
-     * @memberof AuthResponseSuccess
-     */
-    token: string;
-    /**
-     *
-     * @type {object}
-     * @memberof AuthResponseSuccess
-     */
-    user: object;
+  /**
+   *
+   * @type {boolean}
+   * @memberof AuthResponseSuccess
+   */
+  success: boolean;
+  /**
+   *
+   * @type {object}
+   * @memberof AuthResponseSuccess
+   */
+  message: object;
+  /**
+   *
+   * @type {string}
+   * @memberof AuthResponseSuccess
+   */
+  token: string;
+  /**
+   *
+   * @type {object}
+   * @memberof AuthResponseSuccess
+   */
+  user: object;
 }
 /**
  *
@@ -126,30 +145,30 @@ export interface AuthResponseSuccess {
  * @interface BadRequestResponse
  */
 export interface BadRequestResponse {
-    /**
-     *
-     * @type {string}
-     * @memberof BadRequestResponse
-     */
-    'error': string;
-    /**
-     *
-     * @type {number}
-     * @memberof BadRequestResponse
-     */
-    'statusCode': number;
-    /**
-     *
-     * @type {boolean}
-     * @memberof BadRequestResponse
-     */
-    'success'?: boolean;
-    /**
-     *
-     * @type {RegisterResponse400Message}
-     * @memberof BadRequestResponse
-     */
-    'message': RegisterResponse400Message;
+  /**
+   *
+   * @type {string}
+   * @memberof BadRequestResponse
+   */
+  error: string;
+  /**
+   *
+   * @type {number}
+   * @memberof BadRequestResponse
+   */
+  statusCode: number;
+  /**
+   *
+   * @type {boolean}
+   * @memberof BadRequestResponse
+   */
+  success?: boolean;
+  /**
+   *
+   * @type {RegisterResponse400Message}
+   * @memberof BadRequestResponse
+   */
+  message: RegisterResponse400Message;
 }
 /**
  *
@@ -157,42 +176,42 @@ export interface BadRequestResponse {
  * @interface Brand
  */
 export interface Brand {
-    /**
-     *
-     * @type {string}
-     * @memberof Brand
-     */
-    'id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Brand
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Brand
-     */
-    'slug': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Brand
-     */
-    'url': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Brand
-     */
-    'image': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Brand
-     */
-    'status': string;
+  /**
+   *
+   * @type {string}
+   * @memberof Brand
+   */
+  id: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Brand
+   */
+  name: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Brand
+   */
+  slug: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Brand
+   */
+  url: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Brand
+   */
+  image: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Brand
+   */
+  status: string;
 }
 /**
  *
@@ -200,88 +219,109 @@ export interface Brand {
  * @interface BrandsControllerCreatePermission201Response
  */
 export interface BrandsControllerCreatePermission201Response {
-    /**
-     *
-     * @type {string}
-     * @memberof BrandsControllerCreatePermission201Response
-     */
-    'status': BrandsControllerCreatePermission201ResponseStatusEnum;
-    /**
-     *
-     * @type {Brand}
-     * @memberof BrandsControllerCreatePermission201Response
-     */
-    'record'?: Brand;
+  /**
+   *
+   * @type {string}
+   * @memberof BrandsControllerCreatePermission201Response
+   */
+  status: BrandsControllerCreatePermission201ResponseStatusEnum;
+  /**
+   *
+   * @type {Brand}
+   * @memberof BrandsControllerCreatePermission201Response
+   */
+  record?: Brand;
 }
 export declare const BrandsControllerCreatePermission201ResponseStatusEnum: {
-    readonly Success: "success";
-    readonly Error: "error";
+  readonly Success: 'success';
+  readonly Error: 'error';
 };
-export type BrandsControllerCreatePermission201ResponseStatusEnum = typeof BrandsControllerCreatePermission201ResponseStatusEnum[keyof typeof BrandsControllerCreatePermission201ResponseStatusEnum];
+export type BrandsControllerCreatePermission201ResponseStatusEnum =
+  (typeof BrandsControllerCreatePermission201ResponseStatusEnum)[keyof typeof BrandsControllerCreatePermission201ResponseStatusEnum];
 /**
  *
  * @export
  * @interface BrandsControllerListPermissions200Response
  */
 export interface BrandsControllerListPermissions200Response {
-    /**
-     * Dinamik filtre nesnesi
-     * @type {{ [key: string]: any; }}
-     * @memberof BrandsControllerListPermissions200Response
-     */
-    filter: {
-        [key: string]: any;
-    };
-    /**
-     *
-     * @type {PaginationDto}
-     * @memberof BrandsControllerListPermissions200Response
-     */
-    pagination: PaginationDto;
-    /**
-     * Sıralama seçenekleri dizisi
-     * @type {Array<{ [key: string]: string; }>}
-     * @memberof BrandsControllerListPermissions200Response
-     */
-    sortOptions: Array<{
-        [key: string]: string;
-    }>;
-    /**
-     *
-     * @type {Array<Brand>}
-     * @memberof BrandsControllerListPermissions200Response
-     */
-    records?: Array<Brand>;
+  /**
+   * Dinamik filtre nesnesi
+   * @type {{ [key: string]: any; }}
+   * @memberof BrandsControllerListPermissions200Response
+   */
+  filter: {
+    [key: string]: any;
+  };
+  /**
+   *
+   * @type {PaginationDto}
+   * @memberof BrandsControllerListPermissions200Response
+   */
+  pagination: PaginationDto;
+  /**
+   * Sıralama seçenekleri dizisi
+   * @type {Array<{ [key: string]: string; }>}
+   * @memberof BrandsControllerListPermissions200Response
+   */
+  sortOptions: Array<{
+    [key: string]: string;
+  }>;
+  /**
+   *
+   * @type {Array<Brand>}
+   * @memberof BrandsControllerListPermissions200Response
+   */
+  records?: Array<Brand>;
 }
 export declare const BrandsControllerListPermissions200ResponseSortOptionsEnum: {
-    readonly Desc: "desc";
-    readonly Asc: "asc";
+  readonly Desc: 'desc';
+  readonly Asc: 'asc';
 };
-export type BrandsControllerListPermissions200ResponseSortOptionsEnum = typeof BrandsControllerListPermissions200ResponseSortOptionsEnum[keyof typeof BrandsControllerListPermissions200ResponseSortOptionsEnum];
+export type BrandsControllerListPermissions200ResponseSortOptionsEnum =
+  (typeof BrandsControllerListPermissions200ResponseSortOptionsEnum)[keyof typeof BrandsControllerListPermissions200ResponseSortOptionsEnum];
+/**
+ *
+ * @export
+ * @interface Category
+ */
+export interface Category {
+  /**
+   *
+   * @type {string}
+   * @memberof Category
+   */
+  id: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Category
+   */
+  name: string;
+}
 /**
  *
  * @export
  * @interface ChangePasswordDto
  */
 export interface ChangePasswordDto {
-    /**
-     *
-     * @type {string}
-     * @memberof ChangePasswordDto
-     */
-    'password': string;
-    /**
-     *
-     * @type {string}
-     * @memberof ChangePasswordDto
-     */
-    'resetToken'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof ChangePasswordDto
-     */
-    'oldPassword'?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof ChangePasswordDto
+   */
+  password: string;
+  /**
+   *
+   * @type {string}
+   * @memberof ChangePasswordDto
+   */
+  resetToken?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof ChangePasswordDto
+   */
+  oldPassword?: string;
 }
 /**
  *
@@ -289,18 +329,18 @@ export interface ChangePasswordDto {
  * @interface CreateBrandDto
  */
 export interface CreateBrandDto {
-    /**
-     *
-     * @type {string}
-     * @memberof CreateBrandDto
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof CreateBrandDto
-     */
-    'slug': string;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateBrandDto
+   */
+  name: string;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateBrandDto
+   */
+  slug: string;
 }
 /**
  *
@@ -308,18 +348,18 @@ export interface CreateBrandDto {
  * @interface CreateOrganizationDto
  */
 export interface CreateOrganizationDto {
-    /**
-     *
-     * @type {string}
-     * @memberof CreateOrganizationDto
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof CreateOrganizationDto
-     */
-    'slug': string;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateOrganizationDto
+   */
+  name: string;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateOrganizationDto
+   */
+  slug: string;
 }
 /**
  *
@@ -327,60 +367,61 @@ export interface CreateOrganizationDto {
  * @interface CreateResponseDto
  */
 export interface CreateResponseDto {
-    /**
-     *
-     * @type {string}
-     * @memberof CreateResponseDto
-     */
-    'status': CreateResponseDtoStatusEnum;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateResponseDto
+   */
+  status: CreateResponseDtoStatusEnum;
 }
 export declare const CreateResponseDtoStatusEnum: {
-    readonly Success: "success";
-    readonly Error: "error";
+  readonly Success: 'success';
+  readonly Error: 'error';
 };
-export type CreateResponseDtoStatusEnum = typeof CreateResponseDtoStatusEnum[keyof typeof CreateResponseDtoStatusEnum];
+export type CreateResponseDtoStatusEnum =
+  (typeof CreateResponseDtoStatusEnum)[keyof typeof CreateResponseDtoStatusEnum];
 /**
  *
  * @export
  * @interface CreateStoreDto
  */
 export interface CreateStoreDto {
-    /**
-     *
-     * @type {string}
-     * @memberof CreateStoreDto
-     */
-    'marketplace-slug': string;
-    /**
-     *
-     * @type {string}
-     * @memberof CreateStoreDto
-     */
-    'brand-slug': string;
-    /**
-     *
-     * @type {string}
-     * @memberof CreateStoreDto
-     */
-    name: string;
-    /**
-     *
-     * @type {string}
-     * @memberof CreateStoreDto
-     */
-    'store-url': string;
-    /**
-     *
-     * @type {string}
-     * @memberof CreateStoreDto
-     */
-    slug: string;
-    /**
-     *
-     * @type {object}
-     * @memberof CreateStoreDto
-     */
-    credentials: object;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateStoreDto
+   */
+  'marketplace-slug': string;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateStoreDto
+   */
+  'brand-slug': string;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateStoreDto
+   */
+  name: string;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateStoreDto
+   */
+  'store-url': string;
+  /**
+   *
+   * @type {string}
+   * @memberof CreateStoreDto
+   */
+  slug: string;
+  /**
+   *
+   * @type {object}
+   * @memberof CreateStoreDto
+   */
+  credentials: object;
 }
 /**
  *
@@ -388,24 +429,24 @@ export interface CreateStoreDto {
  * @interface ForbiddenResponse
  */
 export interface ForbiddenResponse {
-    /**
-     *
-     * @type {string}
-     * @memberof ForbiddenResponse
-     */
-    error: string;
-    /**
-     *
-     * @type {number}
-     * @memberof ForbiddenResponse
-     */
-    statusCode: number;
-    /**
-     *
-     * @type {LoginResponse400MessageOneOf}
-     * @memberof ForbiddenResponse
-     */
-    message: LoginResponse400MessageOneOf;
+  /**
+   *
+   * @type {string}
+   * @memberof ForbiddenResponse
+   */
+  error: string;
+  /**
+   *
+   * @type {number}
+   * @memberof ForbiddenResponse
+   */
+  statusCode: number;
+  /**
+   *
+   * @type {LoginResponse400MessageOneOf}
+   * @memberof ForbiddenResponse
+   */
+  message: LoginResponse400MessageOneOf;
 }
 /**
  *
@@ -413,52 +454,53 @@ export interface ForbiddenResponse {
  * @interface ListResponseDto
  */
 export interface ListResponseDto {
-    /**
-     * Dinamik filtre nesnesi
-     * @type {{ [key: string]: any; }}
-     * @memberof ListResponseDto
-     */
-    filter: {
-        [key: string]: any;
-    };
-    /**
-     *
-     * @type {PaginationDto}
-     * @memberof ListResponseDto
-     */
-    pagination: PaginationDto;
-    /**
-     * Sıralama seçenekleri dizisi
-     * @type {Array<{ [key: string]: string; }>}
-     * @memberof ListResponseDto
-     */
-    sortOptions: Array<{
-        [key: string]: string;
-    }>;
+  /**
+   * Dinamik filtre nesnesi
+   * @type {{ [key: string]: any; }}
+   * @memberof ListResponseDto
+   */
+  filter: {
+    [key: string]: any;
+  };
+  /**
+   *
+   * @type {PaginationDto}
+   * @memberof ListResponseDto
+   */
+  pagination: PaginationDto;
+  /**
+   * Sıralama seçenekleri dizisi
+   * @type {Array<{ [key: string]: string; }>}
+   * @memberof ListResponseDto
+   */
+  sortOptions: Array<{
+    [key: string]: string;
+  }>;
 }
 export declare const ListResponseDtoSortOptionsEnum: {
-    readonly Desc: "desc";
-    readonly Asc: "asc";
+  readonly Desc: 'desc';
+  readonly Asc: 'asc';
 };
-export type ListResponseDtoSortOptionsEnum = typeof ListResponseDtoSortOptionsEnum[keyof typeof ListResponseDtoSortOptionsEnum];
+export type ListResponseDtoSortOptionsEnum =
+  (typeof ListResponseDtoSortOptionsEnum)[keyof typeof ListResponseDtoSortOptionsEnum];
 /**
  *
  * @export
  * @interface LoginDto
  */
 export interface LoginDto {
-    /**
-     *
-     * @type {string}
-     * @memberof LoginDto
-     */
-    'email': string;
-    /**
-     *
-     * @type {string}
-     * @memberof LoginDto
-     */
-    'password': string;
+  /**
+   *
+   * @type {string}
+   * @memberof LoginDto
+   */
+  email: string;
+  /**
+   *
+   * @type {string}
+   * @memberof LoginDto
+   */
+  password: string;
 }
 /**
  *
@@ -466,54 +508,56 @@ export interface LoginDto {
  * @interface LoginResponse400
  */
 export interface LoginResponse400 {
-    /**
-     *
-     * @type {LoginResponse400Message}
-     * @memberof LoginResponse400
-     */
-    'message': LoginResponse400Message;
-    /**
-     *
-     * @type {string}
-     * @memberof LoginResponse400
-     */
-    'error': string;
-    /**
-     *
-     * @type {number}
-     * @memberof LoginResponse400
-     */
-    'statusCode': number;
-    /**
-     *
-     * @type {boolean}
-     * @memberof LoginResponse400
-     */
-    'success'?: boolean;
+  /**
+   *
+   * @type {LoginResponse400Message}
+   * @memberof LoginResponse400
+   */
+  message: LoginResponse400Message;
+  /**
+   *
+   * @type {string}
+   * @memberof LoginResponse400
+   */
+  error: string;
+  /**
+   *
+   * @type {number}
+   * @memberof LoginResponse400
+   */
+  statusCode: number;
+  /**
+   *
+   * @type {boolean}
+   * @memberof LoginResponse400
+   */
+  success?: boolean;
 }
 /**
  * @type LoginResponse400Message
  * @export
  */
-export type LoginResponse400Message = Array<string> | LoginResponse400MessageOneOf;
+export type LoginResponse400Message =
+  | Array<string>
+  | LoginResponse400MessageOneOf;
 /**
  *
  * @export
  * @interface LoginResponse400MessageOneOf
  */
 export interface LoginResponse400MessageOneOf {
-    /**
-     *
-     * @type {string}
-     * @memberof LoginResponse400MessageOneOf
-     */
-    'tr'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof LoginResponse400MessageOneOf
-     */
-    'en'?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof LoginResponse400MessageOneOf
+   */
+  tr?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof LoginResponse400MessageOneOf
+   */
+  en?: string;
 }
 /**
  *
@@ -521,131 +565,214 @@ export interface LoginResponse400MessageOneOf {
  * @interface MarketPlace
  */
 export interface MarketPlace {
-    /**
-     *
-     * @type {string}
-     * @memberof MarketPlace
-     */
-    'id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof MarketPlace
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof MarketPlace
-     */
-    'slug': string;
-    /**
-     *
-     * @type {string}
-     * @memberof MarketPlace
-     */
-    'url': string;
-    /**
-     *
-     * @type {string}
-     * @memberof MarketPlace
-     */
-    'image': string;
-    /**
-     *
-     * @type {string}
-     * @memberof MarketPlace
-     */
-    'status': string;
-    /**
-     *
-     * @type {Array<object>}
-     * @memberof MarketPlace
-     */
-    'requirements': Array<object>;
+  /**
+   *
+   * @type {string}
+   * @memberof MarketPlace
+   */
+  id: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MarketPlace
+   */
+  name: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MarketPlace
+   */
+  slug: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MarketPlace
+   */
+  url: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MarketPlace
+   */
+  image: string;
+  /**
+   *
+   * @type {string}
+   * @memberof MarketPlace
+   */
+  status: string;
+  /**
+   *
+   * @type {Array<object>}
+   * @memberof MarketPlace
+   */
+  requirements: Array<object>;
 }
+/**
+ *
+ * @export
+ * @interface MarketplaceControllerGetCategoryAttributes200Response
+ */
+export interface MarketplaceControllerGetCategoryAttributes200Response {
+  /**
+   * Dinamik filtre nesnesi
+   * @type {{ [key: string]: any; }}
+   * @memberof MarketplaceControllerGetCategoryAttributes200Response
+   */
+  filter: {
+    [key: string]: any;
+  };
+  /**
+   *
+   * @type {PaginationDto}
+   * @memberof MarketplaceControllerGetCategoryAttributes200Response
+   */
+  pagination: PaginationDto;
+  /**
+   * Sıralama seçenekleri dizisi
+   * @type {Array<{ [key: string]: string; }>}
+   * @memberof MarketplaceControllerGetCategoryAttributes200Response
+   */
+  sortOptions: Array<{
+    [key: string]: string;
+  }>;
+  /**
+   *
+   * @type {Array<Attribute>}
+   * @memberof MarketplaceControllerGetCategoryAttributes200Response
+   */
+  records?: Array<Attribute>;
+}
+export declare const MarketplaceControllerGetCategoryAttributes200ResponseSortOptionsEnum: {
+  readonly Desc: 'desc';
+  readonly Asc: 'asc';
+};
+export type MarketplaceControllerGetCategoryAttributes200ResponseSortOptionsEnum =
+  (typeof MarketplaceControllerGetCategoryAttributes200ResponseSortOptionsEnum)[keyof typeof MarketplaceControllerGetCategoryAttributes200ResponseSortOptionsEnum];
 /**
  *
  * @export
  * @interface MarketplaceControllerListMarketplaces200Response
  */
 export interface MarketplaceControllerListMarketplaces200Response {
-    /**
-     * Dinamik filtre nesnesi
-     * @type {{ [key: string]: any; }}
-     * @memberof MarketplaceControllerListMarketplaces200Response
-     */
-    filter: {
-        [key: string]: any;
-    };
-    /**
-     *
-     * @type {PaginationDto}
-     * @memberof MarketplaceControllerListMarketplaces200Response
-     */
-    pagination: PaginationDto;
-    /**
-     * Sıralama seçenekleri dizisi
-     * @type {Array<{ [key: string]: string; }>}
-     * @memberof MarketplaceControllerListMarketplaces200Response
-     */
-    sortOptions: Array<{
-        [key: string]: string;
-    }>;
-    /**
-     *
-     * @type {Array<MarketPlace>}
-     * @memberof MarketplaceControllerListMarketplaces200Response
-     */
-    records?: Array<MarketPlace>;
+  /**
+   * Dinamik filtre nesnesi
+   * @type {{ [key: string]: any; }}
+   * @memberof MarketplaceControllerListMarketplaces200Response
+   */
+  filter: {
+    [key: string]: any;
+  };
+  /**
+   *
+   * @type {PaginationDto}
+   * @memberof MarketplaceControllerListMarketplaces200Response
+   */
+  pagination: PaginationDto;
+  /**
+   * Sıralama seçenekleri dizisi
+   * @type {Array<{ [key: string]: string; }>}
+   * @memberof MarketplaceControllerListMarketplaces200Response
+   */
+  sortOptions: Array<{
+    [key: string]: string;
+  }>;
+  /**
+   *
+   * @type {Array<MarketPlace>}
+   * @memberof MarketplaceControllerListMarketplaces200Response
+   */
+  records?: Array<MarketPlace>;
 }
 export declare const MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum: {
-    readonly Desc: "desc";
-    readonly Asc: "asc";
+  readonly Desc: 'desc';
+  readonly Asc: 'asc';
 };
-export type MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum = typeof MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum[keyof typeof MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum];
+export type MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum =
+  (typeof MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum)[keyof typeof MarketplaceControllerListMarketplaces200ResponseSortOptionsEnum];
+/**
+ *
+ * @export
+ * @interface MarketplaceControllerSearchCategory200Response
+ */
+export interface MarketplaceControllerSearchCategory200Response {
+  /**
+   * Dinamik filtre nesnesi
+   * @type {{ [key: string]: any; }}
+   * @memberof MarketplaceControllerSearchCategory200Response
+   */
+  filter: {
+    [key: string]: any;
+  };
+  /**
+   *
+   * @type {PaginationDto}
+   * @memberof MarketplaceControllerSearchCategory200Response
+   */
+  pagination: PaginationDto;
+  /**
+   * Sıralama seçenekleri dizisi
+   * @type {Array<{ [key: string]: string; }>}
+   * @memberof MarketplaceControllerSearchCategory200Response
+   */
+  sortOptions: Array<{
+    [key: string]: string;
+  }>;
+  /**
+   *
+   * @type {Array<Category>}
+   * @memberof MarketplaceControllerSearchCategory200Response
+   */
+  records?: Array<Category>;
+}
+export declare const MarketplaceControllerSearchCategory200ResponseSortOptionsEnum: {
+  readonly Desc: 'desc';
+  readonly Asc: 'asc';
+};
+export type MarketplaceControllerSearchCategory200ResponseSortOptionsEnum =
+  (typeof MarketplaceControllerSearchCategory200ResponseSortOptionsEnum)[keyof typeof MarketplaceControllerSearchCategory200ResponseSortOptionsEnum];
 /**
  *
  * @export
  * @interface Organization
  */
 export interface Organization {
-    /**
-     *
-     * @type {string}
-     * @memberof Organization
-     */
-    'id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Organization
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Organization
-     */
-    'slug': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Organization
-     */
-    'status': string;
-    /**
-     *
-     * @type {number}
-     * @memberof Organization
-     */
-    'createdAt': number;
-    /**
-     *
-     * @type {number}
-     * @memberof Organization
-     */
-    'updatedAt': number;
+  /**
+   *
+   * @type {string}
+   * @memberof Organization
+   */
+  id: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Organization
+   */
+  name: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Organization
+   */
+  slug: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Organization
+   */
+  status: string;
+  /**
+   *
+   * @type {number}
+   * @memberof Organization
+   */
+  createdAt: number;
+  /**
+   *
+   * @type {number}
+   * @memberof Organization
+   */
+  updatedAt: number;
 }
 /**
  *
@@ -653,88 +780,90 @@ export interface Organization {
  * @interface OrganizationControllerCreateOrganization201Response
  */
 export interface OrganizationControllerCreateOrganization201Response {
-    /**
-     *
-     * @type {string}
-     * @memberof OrganizationControllerCreateOrganization201Response
-     */
-    'status': OrganizationControllerCreateOrganization201ResponseStatusEnum;
-    /**
-     *
-     * @type {Organization}
-     * @memberof OrganizationControllerCreateOrganization201Response
-     */
-    'record'?: Organization;
+  /**
+   *
+   * @type {string}
+   * @memberof OrganizationControllerCreateOrganization201Response
+   */
+  status: OrganizationControllerCreateOrganization201ResponseStatusEnum;
+  /**
+   *
+   * @type {Organization}
+   * @memberof OrganizationControllerCreateOrganization201Response
+   */
+  record?: Organization;
 }
 export declare const OrganizationControllerCreateOrganization201ResponseStatusEnum: {
-    readonly Success: "success";
-    readonly Error: "error";
+  readonly Success: 'success';
+  readonly Error: 'error';
 };
-export type OrganizationControllerCreateOrganization201ResponseStatusEnum = typeof OrganizationControllerCreateOrganization201ResponseStatusEnum[keyof typeof OrganizationControllerCreateOrganization201ResponseStatusEnum];
+export type OrganizationControllerCreateOrganization201ResponseStatusEnum =
+  (typeof OrganizationControllerCreateOrganization201ResponseStatusEnum)[keyof typeof OrganizationControllerCreateOrganization201ResponseStatusEnum];
 /**
  *
  * @export
  * @interface OrganizationControllerListOrganizations200Response
  */
 export interface OrganizationControllerListOrganizations200Response {
-    /**
-     * Dinamik filtre nesnesi
-     * @type {{ [key: string]: any; }}
-     * @memberof OrganizationControllerListOrganizations200Response
-     */
-    filter: {
-        [key: string]: any;
-    };
-    /**
-     *
-     * @type {PaginationDto}
-     * @memberof OrganizationControllerListOrganizations200Response
-     */
-    pagination: PaginationDto;
-    /**
-     * Sıralama seçenekleri dizisi
-     * @type {Array<{ [key: string]: string; }>}
-     * @memberof OrganizationControllerListOrganizations200Response
-     */
-    sortOptions: Array<{
-        [key: string]: string;
-    }>;
-    /**
-     *
-     * @type {Array<Organization>}
-     * @memberof OrganizationControllerListOrganizations200Response
-     */
-    records?: Array<Organization>;
+  /**
+   * Dinamik filtre nesnesi
+   * @type {{ [key: string]: any; }}
+   * @memberof OrganizationControllerListOrganizations200Response
+   */
+  filter: {
+    [key: string]: any;
+  };
+  /**
+   *
+   * @type {PaginationDto}
+   * @memberof OrganizationControllerListOrganizations200Response
+   */
+  pagination: PaginationDto;
+  /**
+   * Sıralama seçenekleri dizisi
+   * @type {Array<{ [key: string]: string; }>}
+   * @memberof OrganizationControllerListOrganizations200Response
+   */
+  sortOptions: Array<{
+    [key: string]: string;
+  }>;
+  /**
+   *
+   * @type {Array<Organization>}
+   * @memberof OrganizationControllerListOrganizations200Response
+   */
+  records?: Array<Organization>;
 }
 export declare const OrganizationControllerListOrganizations200ResponseSortOptionsEnum: {
-    readonly Desc: "desc";
-    readonly Asc: "asc";
+  readonly Desc: 'desc';
+  readonly Asc: 'asc';
 };
-export type OrganizationControllerListOrganizations200ResponseSortOptionsEnum = typeof OrganizationControllerListOrganizations200ResponseSortOptionsEnum[keyof typeof OrganizationControllerListOrganizations200ResponseSortOptionsEnum];
+export type OrganizationControllerListOrganizations200ResponseSortOptionsEnum =
+  (typeof OrganizationControllerListOrganizations200ResponseSortOptionsEnum)[keyof typeof OrganizationControllerListOrganizations200ResponseSortOptionsEnum];
 /**
  *
  * @export
  * @interface PaginationDto
  */
 export interface PaginationDto {
-    /**
-     *
-     * @type {number}
-     * @memberof PaginationDto
-     */
-    'page': number;
-    /**
-     *
-     * @type {number}
-     * @memberof PaginationDto
-     */
-    'limit': number;
-    /**
-     *
-     * @type {number}
-     * @memberof PaginationDto
-     */
-    'count': number;
+  /**
+   *
+   * @type {number}
+   * @memberof PaginationDto
+   */
+  page: number;
+  /**
+   *
+   * @type {number}
+   * @memberof PaginationDto
+   */
+  limit: number;
+  /**
+   *
+   * @type {number}
+   * @memberof PaginationDto
+   */
+  count: number;
 }
 /**
  *
@@ -742,42 +871,42 @@ export interface PaginationDto {
  * @interface Permission
  */
 export interface Permission {
-    /**
-     *
-     * @type {string}
-     * @memberof Permission
-     */
-    'id': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Permission
-     */
-    'key': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Permission
-     */
-    'description': string;
-    /**
-     *
-     * @type {string}
-     * @memberof Permission
-     */
-    'status': string;
-    /**
-     *
-     * @type {number}
-     * @memberof Permission
-     */
-    'createdAt': number;
-    /**
-     *
-     * @type {number}
-     * @memberof Permission
-     */
-    'updatedAt': number;
+  /**
+   *
+   * @type {string}
+   * @memberof Permission
+   */
+  id: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Permission
+   */
+  key: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Permission
+   */
+  description: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Permission
+   */
+  status: string;
+  /**
+   *
+   * @type {number}
+   * @memberof Permission
+   */
+  createdAt: number;
+  /**
+   *
+   * @type {number}
+   * @memberof Permission
+   */
+  updatedAt: number;
 }
 /**
  *
@@ -785,64 +914,65 @@ export interface Permission {
  * @interface PermissionControllerListPermissions200Response
  */
 export interface PermissionControllerListPermissions200Response {
-    /**
-     * Dinamik filtre nesnesi
-     * @type {{ [key: string]: any; }}
-     * @memberof PermissionControllerListPermissions200Response
-     */
-    filter: {
-        [key: string]: any;
-    };
-    /**
-     *
-     * @type {PaginationDto}
-     * @memberof PermissionControllerListPermissions200Response
-     */
-    pagination: PaginationDto;
-    /**
-     * Sıralama seçenekleri dizisi
-     * @type {Array<{ [key: string]: string; }>}
-     * @memberof PermissionControllerListPermissions200Response
-     */
-    sortOptions: Array<{
-        [key: string]: string;
-    }>;
-    /**
-     *
-     * @type {Array<Permission>}
-     * @memberof PermissionControllerListPermissions200Response
-     */
-    records?: Array<Permission>;
+  /**
+   * Dinamik filtre nesnesi
+   * @type {{ [key: string]: any; }}
+   * @memberof PermissionControllerListPermissions200Response
+   */
+  filter: {
+    [key: string]: any;
+  };
+  /**
+   *
+   * @type {PaginationDto}
+   * @memberof PermissionControllerListPermissions200Response
+   */
+  pagination: PaginationDto;
+  /**
+   * Sıralama seçenekleri dizisi
+   * @type {Array<{ [key: string]: string; }>}
+   * @memberof PermissionControllerListPermissions200Response
+   */
+  sortOptions: Array<{
+    [key: string]: string;
+  }>;
+  /**
+   *
+   * @type {Array<Permission>}
+   * @memberof PermissionControllerListPermissions200Response
+   */
+  records?: Array<Permission>;
 }
 export declare const PermissionControllerListPermissions200ResponseSortOptionsEnum: {
-    readonly Desc: "desc";
-    readonly Asc: "asc";
+  readonly Desc: 'desc';
+  readonly Asc: 'asc';
 };
-export type PermissionControllerListPermissions200ResponseSortOptionsEnum = typeof PermissionControllerListPermissions200ResponseSortOptionsEnum[keyof typeof PermissionControllerListPermissions200ResponseSortOptionsEnum];
+export type PermissionControllerListPermissions200ResponseSortOptionsEnum =
+  (typeof PermissionControllerListPermissions200ResponseSortOptionsEnum)[keyof typeof PermissionControllerListPermissions200ResponseSortOptionsEnum];
 /**
  *
  * @export
  * @interface RegisterDto
  */
 export interface RegisterDto {
-    /**
-     *
-     * @type {string}
-     * @memberof RegisterDto
-     */
-    'name': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RegisterDto
-     */
-    'email': string;
-    /**
-     *
-     * @type {string}
-     * @memberof RegisterDto
-     */
-    'password': string;
+  /**
+   *
+   * @type {string}
+   * @memberof RegisterDto
+   */
+  name: string;
+  /**
+   *
+   * @type {string}
+   * @memberof RegisterDto
+   */
+  email: string;
+  /**
+   *
+   * @type {string}
+   * @memberof RegisterDto
+   */
+  password: string;
 }
 /**
  *
@@ -850,60 +980,62 @@ export interface RegisterDto {
  * @interface RegisterResponse400
  */
 export interface RegisterResponse400 {
-    /**
-     *
-     * @type {RegisterResponse400Message}
-     * @memberof RegisterResponse400
-     */
-    'message': RegisterResponse400Message;
-    /**
-     *
-     * @type {string}
-     * @memberof RegisterResponse400
-     */
-    'error': string;
-    /**
-     *
-     * @type {number}
-     * @memberof RegisterResponse400
-     */
-    'statusCode': number;
-    /**
-     *
-     * @type {boolean}
-     * @memberof RegisterResponse400
-     */
-    'success'?: boolean;
+  /**
+   *
+   * @type {RegisterResponse400Message}
+   * @memberof RegisterResponse400
+   */
+  message: RegisterResponse400Message;
+  /**
+   *
+   * @type {string}
+   * @memberof RegisterResponse400
+   */
+  error: string;
+  /**
+   *
+   * @type {number}
+   * @memberof RegisterResponse400
+   */
+  statusCode: number;
+  /**
+   *
+   * @type {boolean}
+   * @memberof RegisterResponse400
+   */
+  success?: boolean;
 }
 /**
  * @type RegisterResponse400Message
  * @export
  */
-export type RegisterResponse400Message = Array<string> | RegisterResponse400MessageOneOf;
+export type RegisterResponse400Message =
+  | Array<string>
+  | RegisterResponse400MessageOneOf;
 /**
  *
  * @export
  * @interface RegisterResponse400MessageOneOf
  */
 export interface RegisterResponse400MessageOneOf {
-    /**
-     *
-     * @type {string}
-     * @memberof RegisterResponse400MessageOneOf
-     */
-    'field'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RegisterResponse400MessageOneOf
-     */
-    'tr'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof RegisterResponse400MessageOneOf
-     */
-    'en'?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof RegisterResponse400MessageOneOf
+   */
+  field?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof RegisterResponse400MessageOneOf
+   */
+  tr?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof RegisterResponse400MessageOneOf
+   */
+  en?: string;
 }
 /**
  *
@@ -911,12 +1043,12 @@ export interface RegisterResponse400MessageOneOf {
  * @interface ResetPasswordDto
  */
 export interface ResetPasswordDto {
-    /**
-     *
-     * @type {string}
-     * @memberof ResetPasswordDto
-     */
-    'email': string;
+  /**
+   *
+   * @type {string}
+   * @memberof ResetPasswordDto
+   */
+  email: string;
 }
 /**
  *
@@ -924,54 +1056,54 @@ export interface ResetPasswordDto {
  * @interface Store
  */
 export interface Store {
-    /**
-     *
-     * @type {string}
-     * @memberof Store
-     */
-    id: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Store
-     */
-    name: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Store
-     */
-    slug: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Store
-     */
-    url: string;
-    /**
-     *
-     * @type {string}
-     * @memberof Store
-     */
-    status: string;
-    /**
-     *
-     * @type {object}
-     * @memberof Store
-     */
-    credentials: object;
-    /**
-     *
-     * @type {object}
-     * @memberof Store
-     */
-    marketPlace: object;
-    /**
-     *
-     * @type {object}
-     * @memberof Store
-     */
-    brand: object;
+  /**
+   *
+   * @type {string}
+   * @memberof Store
+   */
+  id: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Store
+   */
+  name: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Store
+   */
+  slug: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Store
+   */
+  url: string;
+  /**
+   *
+   * @type {string}
+   * @memberof Store
+   */
+  status: string;
+  /**
+   *
+   * @type {object}
+   * @memberof Store
+   */
+  credentials: object;
+  /**
+   *
+   * @type {object}
+   * @memberof Store
+   */
+  marketPlace: object;
+  /**
+   *
+   * @type {object}
+   * @memberof Store
+   */
+  brand: object;
 }
 /**
  *
@@ -979,82 +1111,84 @@ export interface Store {
  * @interface StoreControllerCreateStore201Response
  */
 export interface StoreControllerCreateStore201Response {
-    /**
-     *
-     * @type {string}
-     * @memberof StoreControllerCreateStore201Response
-     */
-    'status': StoreControllerCreateStore201ResponseStatusEnum;
-    /**
-     *
-     * @type {Store}
-     * @memberof StoreControllerCreateStore201Response
-     */
-    'record'?: Store;
+  /**
+   *
+   * @type {string}
+   * @memberof StoreControllerCreateStore201Response
+   */
+  status: StoreControllerCreateStore201ResponseStatusEnum;
+  /**
+   *
+   * @type {Store}
+   * @memberof StoreControllerCreateStore201Response
+   */
+  record?: Store;
 }
 export declare const StoreControllerCreateStore201ResponseStatusEnum: {
-    readonly Success: "success";
-    readonly Error: "error";
+  readonly Success: 'success';
+  readonly Error: 'error';
 };
-export type StoreControllerCreateStore201ResponseStatusEnum = typeof StoreControllerCreateStore201ResponseStatusEnum[keyof typeof StoreControllerCreateStore201ResponseStatusEnum];
+export type StoreControllerCreateStore201ResponseStatusEnum =
+  (typeof StoreControllerCreateStore201ResponseStatusEnum)[keyof typeof StoreControllerCreateStore201ResponseStatusEnum];
 /**
  *
  * @export
  * @interface StoreControllerListStores200Response
  */
 export interface StoreControllerListStores200Response {
-    /**
-     * Dinamik filtre nesnesi
-     * @type {{ [key: string]: any; }}
-     * @memberof StoreControllerListStores200Response
-     */
-    filter: {
-        [key: string]: any;
-    };
-    /**
-     *
-     * @type {PaginationDto}
-     * @memberof StoreControllerListStores200Response
-     */
-    pagination: PaginationDto;
-    /**
-     * Sıralama seçenekleri dizisi
-     * @type {Array<{ [key: string]: string; }>}
-     * @memberof StoreControllerListStores200Response
-     */
-    sortOptions: Array<{
-        [key: string]: string;
-    }>;
-    /**
-     *
-     * @type {Array<Store>}
-     * @memberof StoreControllerListStores200Response
-     */
-    records?: Array<Store>;
+  /**
+   * Dinamik filtre nesnesi
+   * @type {{ [key: string]: any; }}
+   * @memberof StoreControllerListStores200Response
+   */
+  filter: {
+    [key: string]: any;
+  };
+  /**
+   *
+   * @type {PaginationDto}
+   * @memberof StoreControllerListStores200Response
+   */
+  pagination: PaginationDto;
+  /**
+   * Sıralama seçenekleri dizisi
+   * @type {Array<{ [key: string]: string; }>}
+   * @memberof StoreControllerListStores200Response
+   */
+  sortOptions: Array<{
+    [key: string]: string;
+  }>;
+  /**
+   *
+   * @type {Array<Store>}
+   * @memberof StoreControllerListStores200Response
+   */
+  records?: Array<Store>;
 }
 export declare const StoreControllerListStores200ResponseSortOptionsEnum: {
-    readonly Desc: "desc";
-    readonly Asc: "asc";
+  readonly Desc: 'desc';
+  readonly Asc: 'asc';
 };
-export type StoreControllerListStores200ResponseSortOptionsEnum = typeof StoreControllerListStores200ResponseSortOptionsEnum[keyof typeof StoreControllerListStores200ResponseSortOptionsEnum];
+export type StoreControllerListStores200ResponseSortOptionsEnum =
+  (typeof StoreControllerListStores200ResponseSortOptionsEnum)[keyof typeof StoreControllerListStores200ResponseSortOptionsEnum];
 /**
  *
  * @export
  * @interface SuccessResponse
  */
 export interface SuccessResponse {
-    /**
-     *
-     * @type {boolean}
-     * @memberof SuccessResponse
-     */
-    success: boolean;
-    /**
-     *
-     * @type {LoginResponse400MessageOneOf}
-     * @memberof SuccessResponse
-     */
-    message: LoginResponse400MessageOneOf;
+  /**
+   *
+   * @type {boolean}
+   * @memberof SuccessResponse
+   */
+  success: boolean;
+  /**
+   *
+   * @type {LoginResponse400MessageOneOf}
+   * @memberof SuccessResponse
+   */
+  message: LoginResponse400MessageOneOf;
 }
 /**
  *
@@ -1062,24 +1196,24 @@ export interface SuccessResponse {
  * @interface UnAuthorizedResponse
  */
 export interface UnAuthorizedResponse {
-    /**
-     *
-     * @type {string}
-     * @memberof UnAuthorizedResponse
-     */
-    error: string;
-    /**
-     *
-     * @type {number}
-     * @memberof UnAuthorizedResponse
-     */
-    statusCode: number;
-    /**
-     *
-     * @type {LoginResponse400MessageOneOf}
-     * @memberof UnAuthorizedResponse
-     */
-    message: LoginResponse400MessageOneOf;
+  /**
+   *
+   * @type {string}
+   * @memberof UnAuthorizedResponse
+   */
+  error: string;
+  /**
+   *
+   * @type {number}
+   * @memberof UnAuthorizedResponse
+   */
+  statusCode: number;
+  /**
+   *
+   * @type {LoginResponse400MessageOneOf}
+   * @memberof UnAuthorizedResponse
+   */
+  message: LoginResponse400MessageOneOf;
 }
 /**
  *
@@ -1087,231 +1221,338 @@ export interface UnAuthorizedResponse {
  * @interface VerifyEmailDto
  */
 export interface VerifyEmailDto {
-    /**
-     *
-     * @type {string}
-     * @memberof VerifyEmailDto
-     */
-    'validationCode'?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof VerifyEmailDto
-     */
-    'token'?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VerifyEmailDto
+   */
+  validationCode?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof VerifyEmailDto
+   */
+  token?: string;
 }
 /**
  * AuthApi - axios parameter creator
  * @export
  */
-export declare const AuthApiAxiosParamCreator: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary change password
-     * @param {ChangePasswordDto} changePasswordDto
-     * @param {string} [authorization]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerChangePassword: (changePasswordDto: ChangePasswordDto, authorization?: string, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @summary user login
-     * @param {LoginDto} loginDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerLogin: (loginDto: LoginDto, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @summary get user info
-     * @param {string} token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerMe: (token: string, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerRefresh: (options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @summary user register
-     * @param {RegisterDto} registerDto
-     * @param {string} [inv]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerRegister: (registerDto: RegisterDto, inv?: string, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @summary resend verification mail
-     * @param {string} authorization
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerResendVerification: (authorization: string, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @summary send reset password mail
-     * @param {ResetPasswordDto} resetPasswordDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerResetPassword: (resetPasswordDto: ResetPasswordDto, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     * Note: All parameters in this endpoint can be filled optionally, but if there is an authorization header, it should be sent with the body validationCode, otherwise with the token.
-     * @summary verify email
-     * @param {VerifyEmailDto} verifyEmailDto
-     * @param {string} [authorization]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerVerifyEmail: (verifyEmailDto: VerifyEmailDto, authorization?: string, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
+export declare const AuthApiAxiosParamCreator: (
+  configuration?: Configuration,
+) => {
+  /**
+   *
+   * @summary change password
+   * @param {ChangePasswordDto} changePasswordDto
+   * @param {string} [authorization]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerChangePassword: (
+    changePasswordDto: ChangePasswordDto,
+    authorization?: string,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary user login
+   * @param {LoginDto} loginDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerLogin: (
+    loginDto: LoginDto,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary get user info
+   * @param {string} token
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerMe: (
+    token: string,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerRefresh: (
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary user register
+   * @param {RegisterDto} registerDto
+   * @param {string} [inv]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerRegister: (
+    registerDto: RegisterDto,
+    inv?: string,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary resend verification mail
+   * @param {string} authorization
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerResendVerification: (
+    authorization: string,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary send reset password mail
+   * @param {ResetPasswordDto} resetPasswordDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerResetPassword: (
+    resetPasswordDto: ResetPasswordDto,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   * Note: All parameters in this endpoint can be filled optionally, but if there is an authorization header, it should be sent with the body validationCode, otherwise with the token.
+   * @summary verify email
+   * @param {VerifyEmailDto} verifyEmailDto
+   * @param {string} [authorization]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerVerifyEmail: (
+    verifyEmailDto: VerifyEmailDto,
+    authorization?: string,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
 };
 /**
  * AuthApi - functional programming interface
  * @export
  */
 export declare const AuthApiFp: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary change password
-     * @param {ChangePasswordDto} changePasswordDto
-     * @param {string} [authorization]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerChangePassword(changePasswordDto: ChangePasswordDto, authorization?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SuccessResponse>>;
-    /**
-     *
-     * @summary user login
-     * @param {LoginDto} loginDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerLogin(loginDto: LoginDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthResponseSuccess>>;
-    /**
-     *
-     * @summary get user info
-     * @param {string} token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerMe(token: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthControllerMe200Response>>;
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerRefresh(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>>;
-    /**
-     *
-     * @summary user register
-     * @param {RegisterDto} registerDto
-     * @param {string} [inv]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerRegister(registerDto: RegisterDto, inv?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AuthResponseSuccess>>;
-    /**
-     *
-     * @summary resend verification mail
-     * @param {string} authorization
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerResendVerification(authorization: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SuccessResponse>>;
-    /**
-     *
-     * @summary send reset password mail
-     * @param {ResetPasswordDto} resetPasswordDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerResetPassword(resetPasswordDto: ResetPasswordDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SuccessResponse>>;
-    /**
-     * Note: All parameters in this endpoint can be filled optionally, but if there is an authorization header, it should be sent with the body validationCode, otherwise with the token.
-     * @summary verify email
-     * @param {VerifyEmailDto} verifyEmailDto
-     * @param {string} [authorization]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerVerifyEmail(verifyEmailDto: VerifyEmailDto, authorization?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<SuccessResponse>>;
+  /**
+   *
+   * @summary change password
+   * @param {ChangePasswordDto} changePasswordDto
+   * @param {string} [authorization]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerChangePassword(
+    changePasswordDto: ChangePasswordDto,
+    authorization?: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SuccessResponse>
+  >;
+  /**
+   *
+   * @summary user login
+   * @param {LoginDto} loginDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerLogin(
+    loginDto: LoginDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<AuthResponseSuccess>
+  >;
+  /**
+   *
+   * @summary get user info
+   * @param {string} token
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerMe(
+    token: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<AuthControllerMe200Response>
+  >;
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerRefresh(
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>
+  >;
+  /**
+   *
+   * @summary user register
+   * @param {RegisterDto} registerDto
+   * @param {string} [inv]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerRegister(
+    registerDto: RegisterDto,
+    inv?: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<AuthResponseSuccess>
+  >;
+  /**
+   *
+   * @summary resend verification mail
+   * @param {string} authorization
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerResendVerification(
+    authorization: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SuccessResponse>
+  >;
+  /**
+   *
+   * @summary send reset password mail
+   * @param {ResetPasswordDto} resetPasswordDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerResetPassword(
+    resetPasswordDto: ResetPasswordDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SuccessResponse>
+  >;
+  /**
+   * Note: All parameters in this endpoint can be filled optionally, but if there is an authorization header, it should be sent with the body validationCode, otherwise with the token.
+   * @summary verify email
+   * @param {VerifyEmailDto} verifyEmailDto
+   * @param {string} [authorization]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerVerifyEmail(
+    verifyEmailDto: VerifyEmailDto,
+    authorization?: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SuccessResponse>
+  >;
 };
 /**
  * AuthApi - factory interface
  * @export
  */
-export declare const AuthApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
-    /**
-     *
-     * @summary change password
-     * @param {ChangePasswordDto} changePasswordDto
-     * @param {string} [authorization]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerChangePassword(changePasswordDto: ChangePasswordDto, authorization?: string, options?: any): AxiosPromise<SuccessResponse>;
-    /**
-     *
-     * @summary user login
-     * @param {LoginDto} loginDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerLogin(loginDto: LoginDto, options?: any): AxiosPromise<AuthResponseSuccess>;
-    /**
-     *
-     * @summary get user info
-     * @param {string} token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerMe(token: string, options?: any): AxiosPromise<AuthControllerMe200Response>;
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerRefresh(options?: any): AxiosPromise<object>;
-    /**
-     *
-     * @summary user register
-     * @param {RegisterDto} registerDto
-     * @param {string} [inv]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerRegister(registerDto: RegisterDto, inv?: string, options?: any): AxiosPromise<AuthResponseSuccess>;
-    /**
-     *
-     * @summary resend verification mail
-     * @param {string} authorization
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerResendVerification(authorization: string, options?: any): AxiosPromise<SuccessResponse>;
-    /**
-     *
-     * @summary send reset password mail
-     * @param {ResetPasswordDto} resetPasswordDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerResetPassword(resetPasswordDto: ResetPasswordDto, options?: any): AxiosPromise<SuccessResponse>;
-    /**
-     * Note: All parameters in this endpoint can be filled optionally, but if there is an authorization header, it should be sent with the body validationCode, otherwise with the token.
-     * @summary verify email
-     * @param {VerifyEmailDto} verifyEmailDto
-     * @param {string} [authorization]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    authControllerVerifyEmail(verifyEmailDto: VerifyEmailDto, authorization?: string, options?: any): AxiosPromise<SuccessResponse>;
+export declare const AuthApiFactory: (
+  configuration?: Configuration,
+  basePath?: string,
+  axios?: AxiosInstance,
+) => {
+  /**
+   *
+   * @summary change password
+   * @param {ChangePasswordDto} changePasswordDto
+   * @param {string} [authorization]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerChangePassword(
+    changePasswordDto: ChangePasswordDto,
+    authorization?: string,
+    options?: any,
+  ): AxiosPromise<SuccessResponse>;
+  /**
+   *
+   * @summary user login
+   * @param {LoginDto} loginDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerLogin(
+    loginDto: LoginDto,
+    options?: any,
+  ): AxiosPromise<AuthResponseSuccess>;
+  /**
+   *
+   * @summary get user info
+   * @param {string} token
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerMe(
+    token: string,
+    options?: any,
+  ): AxiosPromise<AuthControllerMe200Response>;
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerRefresh(options?: any): AxiosPromise<object>;
+  /**
+   *
+   * @summary user register
+   * @param {RegisterDto} registerDto
+   * @param {string} [inv]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerRegister(
+    registerDto: RegisterDto,
+    inv?: string,
+    options?: any,
+  ): AxiosPromise<AuthResponseSuccess>;
+  /**
+   *
+   * @summary resend verification mail
+   * @param {string} authorization
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerResendVerification(
+    authorization: string,
+    options?: any,
+  ): AxiosPromise<SuccessResponse>;
+  /**
+   *
+   * @summary send reset password mail
+   * @param {ResetPasswordDto} resetPasswordDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerResetPassword(
+    resetPasswordDto: ResetPasswordDto,
+    options?: any,
+  ): AxiosPromise<SuccessResponse>;
+  /**
+   * Note: All parameters in this endpoint can be filled optionally, but if there is an authorization header, it should be sent with the body validationCode, otherwise with the token.
+   * @summary verify email
+   * @param {VerifyEmailDto} verifyEmailDto
+   * @param {string} [authorization]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  authControllerVerifyEmail(
+    verifyEmailDto: VerifyEmailDto,
+    authorization?: string,
+    options?: any,
+  ): AxiosPromise<SuccessResponse>;
 };
 /**
  * AuthApi - object-oriented interface
@@ -1320,160 +1561,235 @@ export declare const AuthApiFactory: (configuration?: Configuration, basePath?: 
  * @extends {BaseAPI}
  */
 export declare class AuthApi extends BaseAPI {
-    /**
-     *
-     * @summary change password
-     * @param {ChangePasswordDto} changePasswordDto
-     * @param {string} [authorization]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApi
-     */
-    authControllerChangePassword(changePasswordDto: ChangePasswordDto, authorization?: string, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<SuccessResponse, any>>;
-    /**
-     *
-     * @summary user login
-     * @param {LoginDto} loginDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApi
-     */
-    authControllerLogin(loginDto: LoginDto, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<AuthResponseSuccess, any>>;
-    /**
-     *
-     * @summary get user info
-     * @param {string} token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApi
-     */
-    authControllerMe(token: string, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<AuthControllerMe200Response, any>>;
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApi
-     */
-    authControllerRefresh(options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<object, any>>;
-    /**
-     *
-     * @summary user register
-     * @param {RegisterDto} registerDto
-     * @param {string} [inv]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApi
-     */
-    authControllerRegister(registerDto: RegisterDto, inv?: string, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<AuthResponseSuccess, any>>;
-    /**
-     *
-     * @summary resend verification mail
-     * @param {string} authorization
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApi
-     */
-    authControllerResendVerification(authorization: string, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<SuccessResponse, any>>;
-    /**
-     *
-     * @summary send reset password mail
-     * @param {ResetPasswordDto} resetPasswordDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApi
-     */
-    authControllerResetPassword(resetPasswordDto: ResetPasswordDto, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<SuccessResponse, any>>;
-    /**
-     * Note: All parameters in this endpoint can be filled optionally, but if there is an authorization header, it should be sent with the body validationCode, otherwise with the token.
-     * @summary verify email
-     * @param {VerifyEmailDto} verifyEmailDto
-     * @param {string} [authorization]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof AuthApi
-     */
-    authControllerVerifyEmail(verifyEmailDto: VerifyEmailDto, authorization?: string, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<SuccessResponse, any>>;
+  /**
+   *
+   * @summary change password
+   * @param {ChangePasswordDto} changePasswordDto
+   * @param {string} [authorization]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthApi
+   */
+  authControllerChangePassword(
+    changePasswordDto: ChangePasswordDto,
+    authorization?: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<import('axios').AxiosResponse<SuccessResponse, any>>;
+  /**
+   *
+   * @summary user login
+   * @param {LoginDto} loginDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthApi
+   */
+  authControllerLogin(
+    loginDto: LoginDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<import('axios').AxiosResponse<AuthResponseSuccess, any>>;
+  /**
+   *
+   * @summary get user info
+   * @param {string} token
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthApi
+   */
+  authControllerMe(
+    token: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<import('axios').AxiosResponse<AuthControllerMe200Response, any>>;
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthApi
+   */
+  authControllerRefresh(
+    options?: RawAxiosRequestConfig,
+  ): Promise<import('axios').AxiosResponse<object, any>>;
+  /**
+   *
+   * @summary user register
+   * @param {RegisterDto} registerDto
+   * @param {string} [inv]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthApi
+   */
+  authControllerRegister(
+    registerDto: RegisterDto,
+    inv?: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<import('axios').AxiosResponse<AuthResponseSuccess, any>>;
+  /**
+   *
+   * @summary resend verification mail
+   * @param {string} authorization
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthApi
+   */
+  authControllerResendVerification(
+    authorization: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<import('axios').AxiosResponse<SuccessResponse, any>>;
+  /**
+   *
+   * @summary send reset password mail
+   * @param {ResetPasswordDto} resetPasswordDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthApi
+   */
+  authControllerResetPassword(
+    resetPasswordDto: ResetPasswordDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<import('axios').AxiosResponse<SuccessResponse, any>>;
+  /**
+   * Note: All parameters in this endpoint can be filled optionally, but if there is an authorization header, it should be sent with the body validationCode, otherwise with the token.
+   * @summary verify email
+   * @param {VerifyEmailDto} verifyEmailDto
+   * @param {string} [authorization]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof AuthApi
+   */
+  authControllerVerifyEmail(
+    verifyEmailDto: VerifyEmailDto,
+    authorization?: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<import('axios').AxiosResponse<SuccessResponse, any>>;
 }
 /**
  * BrandsApi - axios parameter creator
  * @export
  */
-export declare const BrandsApiAxiosParamCreator: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary create Brand
-     * @param {string} authorization JWT Token
-     * @param {CreateBrandDto} createBrandDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    brandsControllerCreatePermission: (authorization: string, createBrandDto: CreateBrandDto, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @summary list Brands
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    brandsControllerListPermissions: (authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
+export declare const BrandsApiAxiosParamCreator: (
+  configuration?: Configuration,
+) => {
+  /**
+   *
+   * @summary create Brand
+   * @param {string} authorization JWT Token
+   * @param {CreateBrandDto} createBrandDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  brandsControllerCreatePermission: (
+    authorization: string,
+    createBrandDto: CreateBrandDto,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary list Brands
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  brandsControllerListPermissions: (
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
 };
 /**
  * BrandsApi - functional programming interface
  * @export
  */
 export declare const BrandsApiFp: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary create Brand
-     * @param {string} authorization JWT Token
-     * @param {CreateBrandDto} createBrandDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    brandsControllerCreatePermission(authorization: string, createBrandDto: CreateBrandDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BrandsControllerCreatePermission201Response>>;
-    /**
-     *
-     * @summary list Brands
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    brandsControllerListPermissions(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BrandsControllerListPermissions200Response>>;
+  /**
+   *
+   * @summary create Brand
+   * @param {string} authorization JWT Token
+   * @param {CreateBrandDto} createBrandDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  brandsControllerCreatePermission(
+    authorization: string,
+    createBrandDto: CreateBrandDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<BrandsControllerCreatePermission201Response>
+  >;
+  /**
+   *
+   * @summary list Brands
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  brandsControllerListPermissions(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<BrandsControllerListPermissions200Response>
+  >;
 };
 /**
  * BrandsApi - factory interface
  * @export
  */
-export declare const BrandsApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
-    /**
-     *
-     * @summary create Brand
-     * @param {string} authorization JWT Token
-     * @param {CreateBrandDto} createBrandDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    brandsControllerCreatePermission(authorization: string, createBrandDto: CreateBrandDto, options?: any): AxiosPromise<BrandsControllerCreatePermission201Response>;
-    /**
-     *
-     * @summary list Brands
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    brandsControllerListPermissions(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: any): AxiosPromise<BrandsControllerListPermissions200Response>;
+export declare const BrandsApiFactory: (
+  configuration?: Configuration,
+  basePath?: string,
+  axios?: AxiosInstance,
+) => {
+  /**
+   *
+   * @summary create Brand
+   * @param {string} authorization JWT Token
+   * @param {CreateBrandDto} createBrandDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  brandsControllerCreatePermission(
+    authorization: string,
+    createBrandDto: CreateBrandDto,
+    options?: any,
+  ): AxiosPromise<BrandsControllerCreatePermission201Response>;
+  /**
+   *
+   * @summary list Brands
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  brandsControllerListPermissions(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: any,
+  ): AxiosPromise<BrandsControllerListPermissions200Response>;
 };
 /**
  * BrandsApi - object-oriented interface
@@ -1482,65 +1798,98 @@ export declare const BrandsApiFactory: (configuration?: Configuration, basePath?
  * @extends {BaseAPI}
  */
 export declare class BrandsApi extends BaseAPI {
-    /**
-     *
-     * @summary create Brand
-     * @param {string} authorization JWT Token
-     * @param {CreateBrandDto} createBrandDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BrandsApi
-     */
-    brandsControllerCreatePermission(authorization: string, createBrandDto: CreateBrandDto, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<BrandsControllerCreatePermission201Response, any>>;
-    /**
-     *
-     * @summary list Brands
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof BrandsApi
-     */
-    brandsControllerListPermissions(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<BrandsControllerListPermissions200Response, any>>;
+  /**
+   *
+   * @summary create Brand
+   * @param {string} authorization JWT Token
+   * @param {CreateBrandDto} createBrandDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BrandsApi
+   */
+  brandsControllerCreatePermission(
+    authorization: string,
+    createBrandDto: CreateBrandDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<
+      BrandsControllerCreatePermission201Response,
+      any
+    >
+  >;
+  /**
+   *
+   * @summary list Brands
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof BrandsApi
+   */
+  brandsControllerListPermissions(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<
+      BrandsControllerListPermissions200Response,
+      any
+    >
+  >;
 }
 /**
  * DefaultApi - axios parameter creator
  * @export
  */
-export declare const DefaultApiAxiosParamCreator: (configuration?: Configuration) => {
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    healthCheckControllerGetHealthCheck: (options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
+export declare const DefaultApiAxiosParamCreator: (
+  configuration?: Configuration,
+) => {
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  healthCheckControllerGetHealthCheck: (
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
 };
 /**
  * DefaultApi - functional programming interface
  * @export
  */
 export declare const DefaultApiFp: (configuration?: Configuration) => {
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    healthCheckControllerGetHealthCheck(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  healthCheckControllerGetHealthCheck(
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>
+  >;
 };
 /**
  * DefaultApi - factory interface
  * @export
  */
-export declare const DefaultApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    healthCheckControllerGetHealthCheck(options?: any): AxiosPromise<string>;
+export declare const DefaultApiFactory: (
+  configuration?: Configuration,
+  basePath?: string,
+  axios?: AxiosInstance,
+) => {
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  healthCheckControllerGetHealthCheck(options?: any): AxiosPromise<string>;
 };
 /**
  * DefaultApi - object-oriented interface
@@ -1549,91 +1898,225 @@ export declare const DefaultApiFactory: (configuration?: Configuration, basePath
  * @extends {BaseAPI}
  */
 export declare class DefaultApi extends BaseAPI {
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DefaultApi
-     */
-    healthCheckControllerGetHealthCheck(options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<string, any>>;
+  /**
+   *
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof DefaultApi
+   */
+  healthCheckControllerGetHealthCheck(
+    options?: RawAxiosRequestConfig,
+  ): Promise<import('axios').AxiosResponse<string, any>>;
 }
 /**
  * MarketplaceApi - axios parameter creator
  * @export
  */
-export declare const MarketplaceApiAxiosParamCreator: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary list MarketPlaces
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    marketplaceControllerListMarketplaces: (authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @param {string} marketplace
-     * @param {string} search
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    marketplaceControllerSearchCategory: (marketplace: string, search: string, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
+export declare const MarketplaceApiAxiosParamCreator: (
+  configuration?: Configuration,
+) => {
+  /**
+   *
+   * @summary list Attributes
+   * @param {string} marketplace
+   * @param {string} category
+   * @param {string} authorization JWT Token
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  marketplaceControllerGetCategoryAttributes: (
+    marketplace: string,
+    category: string,
+    authorization: string,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary list MarketPlaces
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  marketplaceControllerListMarketplaces: (
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary list Categories
+   * @param {string} marketplace
+   * @param {string} search
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  marketplaceControllerSearchCategory: (
+    marketplace: string,
+    search: string,
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
 };
 /**
  * MarketplaceApi - functional programming interface
  * @export
  */
 export declare const MarketplaceApiFp: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary list MarketPlaces
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    marketplaceControllerListMarketplaces(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<MarketplaceControllerListMarketplaces200Response>>;
-    /**
-     *
-     * @param {string} marketplace
-     * @param {string} search
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    marketplaceControllerSearchCategory(marketplace: string, search: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+  /**
+   *
+   * @summary list Attributes
+   * @param {string} marketplace
+   * @param {string} category
+   * @param {string} authorization JWT Token
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  marketplaceControllerGetCategoryAttributes(
+    marketplace: string,
+    category: string,
+    authorization: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<MarketplaceControllerGetCategoryAttributes200Response>
+  >;
+  /**
+   *
+   * @summary list MarketPlaces
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  marketplaceControllerListMarketplaces(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<MarketplaceControllerListMarketplaces200Response>
+  >;
+  /**
+   *
+   * @summary list Categories
+   * @param {string} marketplace
+   * @param {string} search
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  marketplaceControllerSearchCategory(
+    marketplace: string,
+    search: string,
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<MarketplaceControllerSearchCategory200Response>
+  >;
 };
 /**
  * MarketplaceApi - factory interface
  * @export
  */
-export declare const MarketplaceApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
-    /**
-     *
-     * @summary list MarketPlaces
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    marketplaceControllerListMarketplaces(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: any): AxiosPromise<MarketplaceControllerListMarketplaces200Response>;
-    /**
-     *
-     * @param {string} marketplace
-     * @param {string} search
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    marketplaceControllerSearchCategory(marketplace: string, search: string, options?: any): AxiosPromise<void>;
+export declare const MarketplaceApiFactory: (
+  configuration?: Configuration,
+  basePath?: string,
+  axios?: AxiosInstance,
+) => {
+  /**
+   *
+   * @summary list Attributes
+   * @param {string} marketplace
+   * @param {string} category
+   * @param {string} authorization JWT Token
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  marketplaceControllerGetCategoryAttributes(
+    marketplace: string,
+    category: string,
+    authorization: string,
+    options?: any,
+  ): AxiosPromise<MarketplaceControllerGetCategoryAttributes200Response>;
+  /**
+   *
+   * @summary list MarketPlaces
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  marketplaceControllerListMarketplaces(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: any,
+  ): AxiosPromise<MarketplaceControllerListMarketplaces200Response>;
+  /**
+   *
+   * @summary list Categories
+   * @param {string} marketplace
+   * @param {string} search
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  marketplaceControllerSearchCategory(
+    marketplace: string,
+    search: string,
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: any,
+  ): AxiosPromise<MarketplaceControllerSearchCategory200Response>;
 };
 /**
  * MarketplaceApi - object-oriented interface
@@ -1642,109 +2125,211 @@ export declare const MarketplaceApiFactory: (configuration?: Configuration, base
  * @extends {BaseAPI}
  */
 export declare class MarketplaceApi extends BaseAPI {
-    /**
-     *
-     * @summary list MarketPlaces
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof MarketplaceApi
-     */
-    marketplaceControllerListMarketplaces(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<MarketplaceControllerListMarketplaces200Response, any>>;
-    /**
-     *
-     * @param {string} marketplace
-     * @param {string} search
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof MarketplaceApi
-     */
-    marketplaceControllerSearchCategory(marketplace: string, search: string, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<void, any>>;
+  /**
+   *
+   * @summary list Attributes
+   * @param {string} marketplace
+   * @param {string} category
+   * @param {string} authorization JWT Token
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MarketplaceApi
+   */
+  marketplaceControllerGetCategoryAttributes(
+    marketplace: string,
+    category: string,
+    authorization: string,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<
+      MarketplaceControllerGetCategoryAttributes200Response,
+      any
+    >
+  >;
+  /**
+   *
+   * @summary list MarketPlaces
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MarketplaceApi
+   */
+  marketplaceControllerListMarketplaces(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<
+      MarketplaceControllerListMarketplaces200Response,
+      any
+    >
+  >;
+  /**
+   *
+   * @summary list Categories
+   * @param {string} marketplace
+   * @param {string} search
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof MarketplaceApi
+   */
+  marketplaceControllerSearchCategory(
+    marketplace: string,
+    search: string,
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<
+      MarketplaceControllerSearchCategory200Response,
+      any
+    >
+  >;
 }
 /**
  * OrganizationsApi - axios parameter creator
  * @export
  */
-export declare const OrganizationsApiAxiosParamCreator: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary create Organization
-     * @param {string} authorization JWT Token
-     * @param {CreateOrganizationDto} createOrganizationDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    organizationControllerCreateOrganization: (authorization: string, createOrganizationDto: CreateOrganizationDto, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @summary list Organizations
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    organizationControllerListOrganizations: (authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
+export declare const OrganizationsApiAxiosParamCreator: (
+  configuration?: Configuration,
+) => {
+  /**
+   *
+   * @summary create Organization
+   * @param {string} authorization JWT Token
+   * @param {CreateOrganizationDto} createOrganizationDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  organizationControllerCreateOrganization: (
+    authorization: string,
+    createOrganizationDto: CreateOrganizationDto,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary list Organizations
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  organizationControllerListOrganizations: (
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
 };
 /**
  * OrganizationsApi - functional programming interface
  * @export
  */
 export declare const OrganizationsApiFp: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary create Organization
-     * @param {string} authorization JWT Token
-     * @param {CreateOrganizationDto} createOrganizationDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    organizationControllerCreateOrganization(authorization: string, createOrganizationDto: CreateOrganizationDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrganizationControllerCreateOrganization201Response>>;
-    /**
-     *
-     * @summary list Organizations
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    organizationControllerListOrganizations(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrganizationControllerListOrganizations200Response>>;
+  /**
+   *
+   * @summary create Organization
+   * @param {string} authorization JWT Token
+   * @param {CreateOrganizationDto} createOrganizationDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  organizationControllerCreateOrganization(
+    authorization: string,
+    createOrganizationDto: CreateOrganizationDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<OrganizationControllerCreateOrganization201Response>
+  >;
+  /**
+   *
+   * @summary list Organizations
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  organizationControllerListOrganizations(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<OrganizationControllerListOrganizations200Response>
+  >;
 };
 /**
  * OrganizationsApi - factory interface
  * @export
  */
-export declare const OrganizationsApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
-    /**
-     *
-     * @summary create Organization
-     * @param {string} authorization JWT Token
-     * @param {CreateOrganizationDto} createOrganizationDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    organizationControllerCreateOrganization(authorization: string, createOrganizationDto: CreateOrganizationDto, options?: any): AxiosPromise<OrganizationControllerCreateOrganization201Response>;
-    /**
-     *
-     * @summary list Organizations
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    organizationControllerListOrganizations(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: any): AxiosPromise<OrganizationControllerListOrganizations200Response>;
+export declare const OrganizationsApiFactory: (
+  configuration?: Configuration,
+  basePath?: string,
+  axios?: AxiosInstance,
+) => {
+  /**
+   *
+   * @summary create Organization
+   * @param {string} authorization JWT Token
+   * @param {CreateOrganizationDto} createOrganizationDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  organizationControllerCreateOrganization(
+    authorization: string,
+    createOrganizationDto: CreateOrganizationDto,
+    options?: any,
+  ): AxiosPromise<OrganizationControllerCreateOrganization201Response>;
+  /**
+   *
+   * @summary list Organizations
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  organizationControllerListOrganizations(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: any,
+  ): AxiosPromise<OrganizationControllerListOrganizations200Response>;
 };
 /**
  * OrganizationsApi - object-oriented interface
@@ -1753,86 +2338,142 @@ export declare const OrganizationsApiFactory: (configuration?: Configuration, ba
  * @extends {BaseAPI}
  */
 export declare class OrganizationsApi extends BaseAPI {
-    /**
-     *
-     * @summary create Organization
-     * @param {string} authorization JWT Token
-     * @param {CreateOrganizationDto} createOrganizationDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof OrganizationsApi
-     */
-    organizationControllerCreateOrganization(authorization: string, createOrganizationDto: CreateOrganizationDto, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<OrganizationControllerCreateOrganization201Response, any>>;
-    /**
-     *
-     * @summary list Organizations
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof OrganizationsApi
-     */
-    organizationControllerListOrganizations(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<OrganizationControllerListOrganizations200Response, any>>;
+  /**
+   *
+   * @summary create Organization
+   * @param {string} authorization JWT Token
+   * @param {CreateOrganizationDto} createOrganizationDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof OrganizationsApi
+   */
+  organizationControllerCreateOrganization(
+    authorization: string,
+    createOrganizationDto: CreateOrganizationDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<
+      OrganizationControllerCreateOrganization201Response,
+      any
+    >
+  >;
+  /**
+   *
+   * @summary list Organizations
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof OrganizationsApi
+   */
+  organizationControllerListOrganizations(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<
+      OrganizationControllerListOrganizations200Response,
+      any
+    >
+  >;
 }
 /**
  * PermissionsApi - axios parameter creator
  * @export
  */
-export declare const PermissionsApiAxiosParamCreator: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary list Permissions
-     * @param {string} authorization JWT Token
-     * @param {string} [search]
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    permissionControllerListPermissions: (authorization: string, search?: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
+export declare const PermissionsApiAxiosParamCreator: (
+  configuration?: Configuration,
+) => {
+  /**
+   *
+   * @summary list Permissions
+   * @param {string} authorization JWT Token
+   * @param {string} [search]
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  permissionControllerListPermissions: (
+    authorization: string,
+    search?: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
 };
 /**
  * PermissionsApi - functional programming interface
  * @export
  */
 export declare const PermissionsApiFp: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary list Permissions
-     * @param {string} authorization JWT Token
-     * @param {string} [search]
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    permissionControllerListPermissions(authorization: string, search?: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PermissionControllerListPermissions200Response>>;
+  /**
+   *
+   * @summary list Permissions
+   * @param {string} authorization JWT Token
+   * @param {string} [search]
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  permissionControllerListPermissions(
+    authorization: string,
+    search?: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<PermissionControllerListPermissions200Response>
+  >;
 };
 /**
  * PermissionsApi - factory interface
  * @export
  */
-export declare const PermissionsApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
-    /**
-     *
-     * @summary list Permissions
-     * @param {string} authorization JWT Token
-     * @param {string} [search]
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    permissionControllerListPermissions(authorization: string, search?: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: any): AxiosPromise<PermissionControllerListPermissions200Response>;
+export declare const PermissionsApiFactory: (
+  configuration?: Configuration,
+  basePath?: string,
+  axios?: AxiosInstance,
+) => {
+  /**
+   *
+   * @summary list Permissions
+   * @param {string} authorization JWT Token
+   * @param {string} [search]
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  permissionControllerListPermissions(
+    authorization: string,
+    search?: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: any,
+  ): AxiosPromise<PermissionControllerListPermissions200Response>;
 };
 /**
  * PermissionsApi - object-oriented interface
@@ -1841,101 +2482,163 @@ export declare const PermissionsApiFactory: (configuration?: Configuration, base
  * @extends {BaseAPI}
  */
 export declare class PermissionsApi extends BaseAPI {
-    /**
-     *
-     * @summary list Permissions
-     * @param {string} authorization JWT Token
-     * @param {string} [search]
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PermissionsApi
-     */
-    permissionControllerListPermissions(authorization: string, search?: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<PermissionControllerListPermissions200Response, any>>;
+  /**
+   *
+   * @summary list Permissions
+   * @param {string} authorization JWT Token
+   * @param {string} [search]
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof PermissionsApi
+   */
+  permissionControllerListPermissions(
+    authorization: string,
+    search?: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<
+      PermissionControllerListPermissions200Response,
+      any
+    >
+  >;
 }
 /**
  * StoresApi - axios parameter creator
  * @export
  */
-export declare const StoresApiAxiosParamCreator: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary create Store
-     * @param {string} authorization JWT Token
-     * @param {CreateStoreDto} createStoreDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    storeControllerCreateStore: (authorization: string, createStoreDto: CreateStoreDto, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
-    /**
-     *
-     * @summary list Stores
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    storeControllerListStores: (authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig) => Promise<RequestArgs>;
+export declare const StoresApiAxiosParamCreator: (
+  configuration?: Configuration,
+) => {
+  /**
+   *
+   * @summary create Store
+   * @param {string} authorization JWT Token
+   * @param {CreateStoreDto} createStoreDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  storeControllerCreateStore: (
+    authorization: string,
+    createStoreDto: CreateStoreDto,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
+  /**
+   *
+   * @summary list Stores
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  storeControllerListStores: (
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ) => Promise<RequestArgs>;
 };
 /**
  * StoresApi - functional programming interface
  * @export
  */
 export declare const StoresApiFp: (configuration?: Configuration) => {
-    /**
-     *
-     * @summary create Store
-     * @param {string} authorization JWT Token
-     * @param {CreateStoreDto} createStoreDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    storeControllerCreateStore(authorization: string, createStoreDto: CreateStoreDto, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StoreControllerCreateStore201Response>>;
-    /**
-     *
-     * @summary list Stores
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    storeControllerListStores(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<StoreControllerListStores200Response>>;
+  /**
+   *
+   * @summary create Store
+   * @param {string} authorization JWT Token
+   * @param {CreateStoreDto} createStoreDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  storeControllerCreateStore(
+    authorization: string,
+    createStoreDto: CreateStoreDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<StoreControllerCreateStore201Response>
+  >;
+  /**
+   *
+   * @summary list Stores
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  storeControllerListStores(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    (
+      axios?: AxiosInstance,
+      basePath?: string,
+    ) => AxiosPromise<StoreControllerListStores200Response>
+  >;
 };
 /**
  * StoresApi - factory interface
  * @export
  */
-export declare const StoresApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
-    /**
-     *
-     * @summary create Store
-     * @param {string} authorization JWT Token
-     * @param {CreateStoreDto} createStoreDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    storeControllerCreateStore(authorization: string, createStoreDto: CreateStoreDto, options?: any): AxiosPromise<StoreControllerCreateStore201Response>;
-    /**
-     *
-     * @summary list Stores
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    storeControllerListStores(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: any): AxiosPromise<StoreControllerListStores200Response>;
+export declare const StoresApiFactory: (
+  configuration?: Configuration,
+  basePath?: string,
+  axios?: AxiosInstance,
+) => {
+  /**
+   *
+   * @summary create Store
+   * @param {string} authorization JWT Token
+   * @param {CreateStoreDto} createStoreDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  storeControllerCreateStore(
+    authorization: string,
+    createStoreDto: CreateStoreDto,
+    options?: any,
+  ): AxiosPromise<StoreControllerCreateStore201Response>;
+  /**
+   *
+   * @summary list Stores
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   */
+  storeControllerListStores(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: any,
+  ): AxiosPromise<StoreControllerListStores200Response>;
 };
 /**
  * StoresApi - object-oriented interface
@@ -1944,27 +2647,42 @@ export declare const StoresApiFactory: (configuration?: Configuration, basePath?
  * @extends {BaseAPI}
  */
 export declare class StoresApi extends BaseAPI {
-    /**
-     *
-     * @summary create Store
-     * @param {string} authorization JWT Token
-     * @param {CreateStoreDto} createStoreDto
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StoresApi
-     */
-    storeControllerCreateStore(authorization: string, createStoreDto: CreateStoreDto, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<StoreControllerCreateStore201Response, any>>;
-    /**
-     *
-     * @summary list Stores
-     * @param {string} authorization JWT Token
-     * @param {number} [limit]
-     * @param {number} [page]
-     * @param {string} [orderBy]
-     * @param {boolean} [desc]
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StoresApi
-     */
-    storeControllerListStores(authorization: string, limit?: number, page?: number, orderBy?: string, desc?: boolean, options?: RawAxiosRequestConfig): Promise<import("axios").AxiosResponse<StoreControllerListStores200Response, any>>;
+  /**
+   *
+   * @summary create Store
+   * @param {string} authorization JWT Token
+   * @param {CreateStoreDto} createStoreDto
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof StoresApi
+   */
+  storeControllerCreateStore(
+    authorization: string,
+    createStoreDto: CreateStoreDto,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<StoreControllerCreateStore201Response, any>
+  >;
+  /**
+   *
+   * @summary list Stores
+   * @param {string} authorization JWT Token
+   * @param {number} [limit]
+   * @param {number} [page]
+   * @param {string} [orderBy]
+   * @param {boolean} [desc]
+   * @param {*} [options] Override http request option.
+   * @throws {RequiredError}
+   * @memberof StoresApi
+   */
+  storeControllerListStores(
+    authorization: string,
+    limit?: number,
+    page?: number,
+    orderBy?: string,
+    desc?: boolean,
+    options?: RawAxiosRequestConfig,
+  ): Promise<
+    import('axios').AxiosResponse<StoreControllerListStores200Response, any>
+  >;
 }
